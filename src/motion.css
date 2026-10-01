@@ -1,0 +1,68 @@
+/* One motion system: quick feedback, softer entrances, no scroll interception. */
+:root {
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-smooth: cubic-bezier(.4, 0, .2, 1);
+  --motion-feedback: 220ms;
+  --motion-reveal: 640ms;
+}
+
+.reveal-ready {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  transition: opacity var(--motion-reveal) var(--ease-out), transform var(--motion-reveal) var(--ease-out);
+}
+.reveal-ready.revealed { opacity: 1; transform: none; }
+.button, .service-card, .whatsapp-button {
+  transition: transform 320ms var(--ease-out), background-color var(--motion-feedback) var(--ease-smooth), box-shadow 320ms var(--ease-out);
+}
+.button:active { transform: translateY(0) scale(.985); }
+.service-card:active { transform: translateY(0); }
+.service-card .service-card-photo img,
+.portfolio-card .portfolio-photo img,
+.project-photo img,
+.purpose-image img { transition: transform 800ms var(--ease-out); }
+.button svg, .text-link svg, .card-bottom svg { transition: transform 320ms var(--ease-out); }
+.navigation > a { transition: color var(--motion-feedback) var(--ease-smooth), background-color var(--motion-feedback) var(--ease-smooth); }
+
+.hero-banner .hero-scene { transition: opacity 1100ms var(--ease-smooth); }
+.hero-banner .hero-scene img { transition: transform 7500ms var(--ease-smooth); }
+.hero-banner .hero-background-video { opacity: 0; transition: opacity 600ms var(--ease-smooth); }
+.hero-banner .hero-background-video.video-ready { opacity: 1; }
+.hero-banner-content > .eyebrow,
+.hero-banner-content > h1,
+.hero-banner-content > .hero-banner-description,
+.hero-banner-content > .hero-banner-actions { animation-duration: 700ms; animation-timing-function: var(--ease-out); }
+.hero-banner .hero-slide-caption { animation-duration: 500ms; animation-timing-function: var(--ease-out); }
+.hero-carousel-controls > button, .hero-discover { min-width: 44px; min-height: 44px; transition: background-color var(--motion-feedback) var(--ease-smooth); }
+.hero-slide-dots button { min-height: 44px; }
+.hero-slide-dots span { transition: width 350ms var(--ease-out), background-color 350ms var(--ease-smooth); }
+.service-dialog[open] { animation: dialog-enter 240ms var(--ease-out) both; }
+.service-dialog[open]::backdrop { animation: backdrop-enter 240ms var(--ease-smooth) both; }
+@keyframes dialog-enter { from { opacity: 0; transform: translateY(10px) scale(.99); } to { opacity: 1; transform: none; } }
+@keyframes backdrop-enter { from { opacity: 0; } to { opacity: 1; } }
+
+@media (max-width: 760px) {
+  .reveal-ready { transform: translate3d(0, 10px, 0); transition-duration: 480ms; transition-delay: 0ms !important; }
+  .hero-banner .hero-scene img { transform: none; transition: none; }
+  .hero-banner .hero-slide-caption { min-height: 48px; }
+  .hero-banner .hero-carousel-controls { gap: 4px; }
+  .hero-banner .hero-slide-dots button { padding: 13px 8px; }
+  .hero-banner .hero-slide-dots span { width: 8px; }
+  .hero-banner .hero-slide-dots button[aria-pressed=true] span { width: 18px; }
+  .hero-banner .hero-discover { display: none; }
+  .navigation.open { animation: menu-enter 220ms var(--ease-out) both; }
+}
+@keyframes menu-enter { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+/* Touch scrolling should not trigger sticky hover lifts or zooms. */
+@media (hover: none) {
+  .button:hover, .service-card:hover, .whatsapp-button:hover,
+  .button:hover svg, .text-link:hover svg, .service-card:hover .card-bottom svg,
+  .service-card:hover .service-card-photo img, .portfolio-card:hover .portfolio-photo img,
+  .project-photo:hover img, .purpose-image:hover img { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready, .reveal-ready.revealed { opacity: 1; transform: none; }
+  .hero-banner .hero-background-video { opacity: 1; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

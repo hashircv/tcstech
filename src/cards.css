@@ -1,0 +1,17 @@
+:root { --radius-card: 18px; }
+
+.service-grid .service-card,
+.portfolio-grid .portfolio-card,
+.team-grid .team-card,
+.project-overview-links > a,
+.market-grid > a,
+form.enquiry-form,
+dialog.service-dialog,
+.detail-body .faq-section,
+.related-grid > a { border-radius: var(--radius-card); }
+
+.service-image-gallery figure { border-radius: var(--radius-card); overflow: hidden; }
+.project-thumbnail { border-radius: 12px; overflow: hidden; }
+@media (max-width: 760px) {
+  .article-layout .contents-panel { border-radius: var(--radius-card); }
+}

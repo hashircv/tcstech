@@ -1,0 +1,52 @@
+/* Home-specific choreography. Elements enter once; scrolling stays native. */
+.home-page .motion-stagger.reveal-ready > * {
+  opacity: 0;
+  transform: translate3d(0, 12px, 0);
+  transition: opacity 650ms var(--ease-out), transform 750ms var(--ease-out);
+}
+.home-page .motion-stagger.revealed > * { opacity: 1; transform: none; }
+.home-page .motion-stagger > :nth-child(2) { transition-delay: 70ms; }
+.home-page .motion-stagger > :nth-child(3) { transition-delay: 140ms; }
+.home-page .motion-stagger > :nth-child(n+4) { transition-delay: 210ms; }
+.home-page .motion-stagger:focus-within > * { opacity: 1; transform: none; transition-delay: 0ms; }
+.home-page .motion-image img { transition: transform 1200ms var(--ease-out); }
+.home-page .motion-image.reveal-ready:not(.revealed) img { transform: scale(1.06); }
+.home-page .motion-image.revealed img { transform: scale(1); }
+.home-page .approach-grid .reveal-ready .step-number span {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 900ms var(--ease-out) 150ms;
+}
+.home-page .approach-grid .revealed .step-number span { transform: scaleX(1); }
+.home-page .about-right.revealed .stats > div { animation: stat-enter 700ms var(--ease-out) both; }
+.home-page .about-right.revealed .stats > div:nth-child(2) { animation-delay: 100ms; }
+.home-page .about-right.revealed .stats > div:nth-child(3) { animation-delay: 200ms; }
+@keyframes stat-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.home-page .service-filters button { transition: background-color 250ms var(--ease-smooth), color 250ms var(--ease-smooth), border-color 250ms var(--ease-smooth); }
+@media (hover: hover) and (pointer: fine) {
+  .home-page .project-item .project-thumbnail img { transition: transform 650ms var(--ease-out); }
+  .home-page .project-item:hover .project-thumbnail img { transform: scale(1.035); }
+}
+.home-page .hero-slide-dots span { position: relative; overflow: hidden; }
+.home-page .hero-slide-dots button[aria-pressed=true] span { background: #ffffff50; }
+.home-page .hero-slide-dots button[aria-pressed=true] span::after {
+  content: ''; position: absolute; inset: 0; background: #dceabf;
+  transform-origin: left;
+  animation: slide-progress 6500ms linear both;
+}
+.home-page .hero-banner[data-video-slide=true] .hero-slide-dots button[aria-pressed=true] span::after { animation-duration: 8000ms; }
+.home-page .hero-banner[data-autoplay-paused=true] .hero-slide-dots span::after { animation: none; transform: scaleX(1); }
+@keyframes slide-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (max-width: 760px) {
+  .home-page .motion-stagger.reveal-ready > * { transition-duration: 480ms; transform: translate3d(0, 7px, 0); }
+  .home-page .motion-stagger.revealed > * { transform: none; }
+  .home-page .motion-stagger > :nth-child(2) { transition-delay: 40ms; }
+  .home-page .motion-stagger > :nth-child(n+3) { transition-delay: 80ms; }
+  .home-page .motion-image img { transition-duration: 850ms; }
+  .home-page .motion-image.reveal-ready:not(.revealed) img { transform: scale(1.025); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-page .motion-stagger.reveal-ready > *, .home-page .motion-image img,
+  .home-page .approach-grid .step-number span { opacity: 1; transform: none !important; transition: none !important; }
+  .home-page .about-right .stats > div, .home-page .hero-slide-dots span::after { animation: none !important; }
+}

@@ -1,0 +1,26 @@
+.inner-page .page-hero > * { animation: inner-heading-enter 600ms var(--ease-out) both; }
+.inner-page .page-hero > .eyebrow { animation-delay: 40ms; }
+.inner-page .page-hero > h1 { animation-delay: 90ms; }
+.inner-page .page-hero > .page-intro { animation-delay: 150ms; }
+@keyframes inner-heading-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.inner-page .page-motion-item { opacity: 0; transform: translate3d(0, 14px, 0); transition: opacity 580ms var(--ease-out), transform 650ms var(--ease-out); }
+.inner-page .page-motion-item.page-motion-visible { opacity: 1; transform: none; }
+.inner-page .service-image-gallery .page-motion-item img { transition: transform 1000ms var(--ease-out); }
+.inner-page .service-image-gallery .page-motion-item:not(.page-motion-visible) img { transform: scale(1.04); }
+.inner-page .service-image-gallery .page-motion-visible img { transform: none; }
+.inner-page .page-tabs a, .inner-page .market-grid > a, .inner-page .project-overview-links > a { transition: background-color 250ms var(--ease-smooth), border-color 250ms var(--ease-smooth), color 250ms var(--ease-smooth); }
+.inner-page .market-grid > .page-motion-item, .inner-page .project-overview-links > .page-motion-item {
+  transition: opacity 580ms var(--ease-out), transform 650ms var(--ease-out), background-color 250ms var(--ease-smooth);
+}
+@media (max-width: 760px) {
+  .inner-page .page-hero > * { animation-duration: 480ms; }
+  .inner-page .page-hero > h1 { animation-delay: 50ms; }
+  .inner-page .page-hero > .page-intro { animation-delay: 90ms; }
+  .inner-page .page-motion-item { transform: translate3d(0, 8px, 0); transition-duration: 460ms; }
+  .inner-page .page-motion-item.page-motion-visible { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .inner-page .page-hero > * { animation: none !important; }
+  .inner-page .page-motion-item, .inner-page .page-motion-item.page-motion-visible,
+  .inner-page .service-image-gallery .page-motion-item img { opacity: 1; transform: none !important; transition: none !important; }
+}

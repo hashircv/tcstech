@@ -1,0 +1,5 @@
+.navigation > .mobile-home-link { display: none; }
+
+@media (max-width: 760px) {
+  .navigation > .mobile-home-link { display: flex; }
+}
