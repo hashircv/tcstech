@@ -12,7 +12,8 @@ export function CareerPage() {
       />
       <section className="section-shell directory-section">
         <div className="career-layout">
-          <div className="detail-body">
+          <div className="detail-body career-copy">
+            <p className="career-copy-eyebrow">A place to grow</p>
             <ArticleIntro />
             <div className="career-positions">
               <h2>Featured positions</h2>
@@ -59,9 +60,16 @@ function ArticleIntro() {
         .slice(1)
         .map((b, i) =>
           b.type === "heading" ? (
-            <h2 key={i}>{b.text}</h2>
+            <h2
+              className={i === 1 ? 'career-section-heading' : 'career-highlight-heading'}
+              key={i}
+            >
+              {b.text}
+            </h2>
           ) : (
-            <p key={i}>{b.text}</p>
+            <p className={i === 0 ? 'career-lead' : undefined} key={i}>
+              {b.text}
+            </p>
           ),
         )}
     </>

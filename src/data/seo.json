@@ -1,0 +1,29 @@
+{
+  "siteName": "TCS Building Energy Efficiency Services",
+  "home": {
+    "title": "Better buildings. Building Energy Efficiency at TCS | Dubai",
+    "description": "TCS provides building energy efficiency, MEP testing and commissioning, energy audits, and building performance services across the UAE."
+  },
+  "serviceTitleTemplate": "{title} Services in Dubai | TCS",
+  "serviceDescriptionTemplate": "{description} TCS supports buildings in Dubai and across the UAE with specialist testing, engineering and documented recommendations.",
+  "pages": {
+    "services": { "title": "Building Energy Efficiency Services in Dubai | TCS", "description": "Explore 16 TCS building energy services in Dubai and across the UAE, including MEP commissioning, recommissioning, HVAC testing and building envelope assessments." },
+    "about": { "title": "About TCS | Building Energy Efficiency in Dubai", "description": "Learn about TCS, a Dubai based building energy efficiency and MEP engineering services provider supporting projects across the UAE since 2017." },
+    "our-team": { "title": "TCS Engineering Team | Dubai, UAE", "description": "Meet the TCS engineers and technical specialists delivering MEP testing, commissioning and building performance services in the UAE." },
+    "projects": { "title": "TCS Building Projects Across the UAE", "description": "Explore TCS building performance projects across the UAE, with completed and ongoing work in hospitality, commercial and residential buildings." },
+    "certifications": { "title": "ISO Certifications | TCS Building Energy Efficiency Services", "description": "Review TCS ISO 9001:2015 quality, ISO 14001:2015 environmental, and ISO 45001:2018 occupational health and safety certificates, including scope and dates." },
+    "completed": { "title": "Completed Building Projects | TCS UAE", "description": "Explore selected completed projects delivered by TCS across Dubai, Abu Dhabi and the UAE, and view the published project list." },
+    "on-going": { "title": "Ongoing Building Projects | TCS UAE", "description": "View selected ongoing TCS projects across the UAE and access the published project list." },
+    "career": { "title": "Engineering Careers at TCS Dubai", "description": "Explore engineering and technical career opportunities with TCS Building Energy Efficiency Services in Dubai." },
+    "contact": { "title": "Contact TCS Dubai | Building Energy Services", "description": "Contact TCS in Dubai to discuss building energy efficiency, MEP testing, commissioning and engineering services across the UAE." },
+    "markets": { "title": "Building Engineering Services by Sector | TCS UAE", "description": "Discover the building types and sectors supported by TCS building energy efficiency and MEP engineering services across the UAE." },
+    "news-insight": { "title": "TCS News and Engineering Insights", "description": "TCS updates and information about building energy efficiency, building systems and engineering services." }
+  },
+  "indexedTitleOverrides": {
+    "testing-commissioning-of-mep-system": "Testing and Commissioning Services at TCS in the UAE",
+    "testing-and-balancing": "Testing, Adjusting and Balancing Services in Dubai | TCS",
+    "indoor-air-quality-testing-service": "Indoor Air Quality Testing Services at TCS in Dubai",
+    "re-commissioning-and-retro-commissioning": "TCS Retro Commissioning Services in the UAE"
+  },
+  "socialImage": "/images/editorial/architecture.webp"
+}

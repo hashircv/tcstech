@@ -5,6 +5,7 @@ export const titles: Record<string, string> = {
   about: "About TCS",
   "our-team": "The people behind the performance",
   projects: "Our project experience",
+  certifications: "Our certifications",
   completed: "Completed projects",
   "on-going": "Ongoing projects",
   career: "Build your career with TCS",

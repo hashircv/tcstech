@@ -26,8 +26,8 @@ export const services: Service[] = [
     description:
       "Understand your energy use. Uncover practical opportunities for a more efficient building.",
     items: [
-      "Energy audits and optimization",
       "Re-commissioning and retro-commissioning",
+      "Operational efficiency recommendations",
       "Building system performance assessment",
     ],
   },
@@ -41,7 +41,6 @@ export const services: Service[] = [
       "Thermal imaging and blower door testing",
       "U-value testing",
       "Window air permeability testing",
-      "Water penetration testing",
     ],
   },
   {
@@ -77,7 +76,6 @@ export const services: Service[] = [
     description:
       "Support your building beyond handover with practical care and detailed system inspections.",
     items: [
-      "Facility management",
       "MEP pre-handover inspection and snagging",
       "Integrated mechanical, electrical and plumbing solutions",
     ],

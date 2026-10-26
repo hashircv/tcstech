@@ -16,8 +16,8 @@ export const serviceVisuals: Record<string, { src: string; alt: string }> = {
     alt: "Illustrative engineer assessing building envelope performance with a thermal imaging camera",
   },
   energy: {
-    src: "/images/editorial/energy-audit.webp",
-    alt: "Illustrative energy specialist reviewing building energy consumption graphs",
+    src: "/images/editorial/retro-commissioning.webp",
+    alt: "Illustrative engineer assessing existing building systems for recommissioning",
   },
   air: {
     src: "/images/editorial/air-quality.webp",
@@ -66,10 +66,6 @@ const specificVisuals: Record<string, { src: string; alt: string }> = {
     src: "/images/editorial/acoustics.webp",
     alt: "Illustrative acoustic testing equipment in a modern conference room with sound-absorbing panels",
   },
-  "water-penetration-test": {
-    src: "/images/editorial/facade-testing.webp",
-    alt: "Illustrative spray rack testing water resistance of a glazed building facade",
-  },
   "micro-camera-inspection-service-for-drainage-lines-hvac-ducting": {
     src: "/images/editorial/camera-inspection.webp",
     alt: "Illustrative technician using a push-rod camera to inspect the interior of a drainage pipe",
@@ -81,14 +77,6 @@ const specificVisuals: Record<string, { src: string; alt: string }> = {
   "mep-health-check": {
     src: "/images/editorial/property-inspection.webp",
     alt: "Illustrative engineer inspecting plumbing installation quality before building handover",
-  },
-  "energy-optimization-through-energy-audit": {
-    src: "/images/editorial/energy-audit.webp",
-    alt: "Illustrative energy specialist reviewing building consumption graphs in a control room",
-  },
-  "facility-management": {
-    src: "/images/editorial/facility-maintenance.webp",
-    alt: "Illustrative facilities engineer checking a chilled-water pump and insulated pipework",
   },
   "commissioning-management": {
     src: "/images/editorial/commissioning-planning.webp",

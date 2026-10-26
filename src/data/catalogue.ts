@@ -70,32 +70,11 @@ export const catalogue = [
       "Sound insulation, reverberation, speech clarity and background noise testing.",
   },
   {
-    slug: "water-penetration-test",
-    title: "Water penetration testing",
-    group: "envelope",
-    description:
-      "Water resistance testing for windows, doors, skylights and curtain walls.",
-  },
-  {
     slug: "mep-health-check",
     title: "MEP health check & snagging",
     group: "facilities",
     description:
       "Pre-purchase and pre-handover inspections of MEP systems and installation quality.",
-  },
-  {
-    slug: "energy-optimization-through-energy-audit",
-    title: "Energy audits & optimization",
-    group: "energy",
-    description:
-      "ASHRAE Level 1, 2 and 3 audits, energy-use analysis and improvement opportunities.",
-  },
-  {
-    slug: "facility-management",
-    title: "Facility management",
-    group: "facilities",
-    description:
-      "Coordinated mechanical, electrical and plumbing maintenance and operation.",
   },
   {
     slug: "indoor-air-quality-testing-service",

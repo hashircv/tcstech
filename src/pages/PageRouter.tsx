@@ -2,11 +2,13 @@ import { lazy, Suspense, useEffect } from 'react';
 import content from '../data/site-content.json';
 import { titles } from '../data/pages';
 import { PageMotion } from '../components/PageMotion';
+import { getPageSEO, updatePageSEO } from '../data/seo';
 import './pages.css';
 
 const ServicesPage = lazy(() => import('./ServicesPage').then(module => ({ default: module.ServicesPage })));
 const ServiceDetailPage = lazy(() => import('./ServiceDetailPage').then(module => ({ default: module.ServiceDetailPage })));
 const ProjectsPage = lazy(() => import('./ProjectsPage').then(module => ({ default: module.ProjectsPage })));
+const CertificationPage = lazy(() => import('./CertificationPage').then(module => ({ default: module.CertificationPage })));
 const CompletedProjectsPage = lazy(() => import('./CompletedProjectsPage').then(module => ({ default: module.CompletedProjectsPage })));
 const OngoingProjectsPage = lazy(() => import('./OngoingProjectsPage').then(module => ({ default: module.OngoingProjectsPage })));
 const AboutPage = lazy(() => import('./AboutPage').then(module => ({ default: module.AboutPage })));
@@ -20,6 +22,7 @@ const NotFoundPage = lazy(() => import('./NotFoundPage').then(module => ({ defau
 const pages = {
   services: ServicesPage,
   projects: ProjectsPage,
+  certifications: CertificationPage,
   completed: CompletedProjectsPage,
   'on-going': OngoingProjectsPage,
   about: AboutPage,
@@ -35,14 +38,13 @@ export default function PageRouter({ pathname }: { pathname: string }) {
   const aliases: Record<string, string> = content.aliases;
   const slug = aliases[path] ?? path;
   const service = content.services.find(service => service.slug === slug);
-  const title = service?.title || titles[slug] || 'Page not found';
+  const pageSEO = getPageSEO(slug, service);
+  const unknown = !service && !titles[slug];
   const Page = pages[slug as keyof typeof pages] || NotFoundPage;
 
   useEffect(() => {
-    document.title = `${title} | TCS Building Energy Efficiency Services`;
-    document.querySelector('meta[name="description"]')?.setAttribute('content',
-      service?.description || `${title} — TCS building energy efficiency, engineering and MEP services in the UAE.`);
-  }, [title, service]);
+    updatePageSEO(pageSEO, unknown);
+  }, [pageSEO.title, pageSEO.description, pageSEO.canonical, pageSEO.structuredData, unknown]);
 
   return <>
       <Suspense fallback={<div className="page-loading" role="status">Loading TCS…</div>}>

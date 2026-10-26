@@ -11,7 +11,7 @@ test('desktop service discovery, dialog keyboard behavior and project expansion'
   await expect(page.locator('.service-card')).toHaveCount(1);
   await page.locator('.service-card').click();
   await expect(page.getByRole('dialog')).toBeVisible();
-  await expect(page.getByRole('dialog')).toContainText('Energy audits and optimization');
+  await expect(page.getByRole('dialog')).toContainText('Re-commissioning and retro-commissioning');
   await page.keyboard.press('Escape');
   await expect(page.getByRole('dialog')).not.toBeVisible();
   await expect(page.locator('.service-card')).toBeFocused();
@@ -39,6 +39,10 @@ test('mobile navigation, viewport fit and reduced motion', async ({ page }) => {
   await page.getByRole('button', { name: 'Open menu' }).click();
   await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true }).click();
   await expect(page).toHaveURL('http://127.0.0.1:5174/');
+  await expect(page.getByRole('navigation', { name: 'Main navigation' })).not.toBeVisible();
+  await page.getByRole('button', { name: 'Open menu' }).click();
+  await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Contact us' }).click();
+  await expect(page).toHaveURL(/\/contact\//);
   await expect(page.getByRole('navigation', { name: 'Main navigation' })).not.toBeVisible();
   await page.getByRole('button', { name: 'Open menu' }).click();
   await expect(page.getByRole('navigation', { name: 'Main navigation' })).toBeVisible();

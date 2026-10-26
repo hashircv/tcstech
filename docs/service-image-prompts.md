@@ -1,12 +1,12 @@
 # Service photograph prompt set
 
-Created with the built-in ImageGen tool. Final assets live in `public/images/editorial/`, with original authoring PNGs retained in a local archive outside this production repository. Each of the 19 services has a distinct assigned photograph; see `coverage-check.md` for the exact assignment.
+Created with the built-in ImageGen tool. Final assets live in `public/images/editorial/`, with original authoring PNGs retained in a local archive outside this production repository. Each active service has a distinct assigned photograph; retired service-specific image assignments were removed from the production asset set. See `coverage-check.md` for the active assignments.
 
 These are illustrative service scenes, not photographs of TCS employees or named customer projects. The project photographs remain separate, matched to the original website.
 
 Common direction: high-quality photorealistic editorial engineering photographs in landscape 3:2 framing, realistic practical equipment and human anatomy, soft natural lighting, warm ivory with restrained sage/navy, centered subjects with space for mobile crops. No logo, watermark, collage, captions or readable text.
 
-The earlier engineering plant-room scene is recorded in `image-direction.md`. The first six new subjects were closed electrical switchgear inspection; HVAC duct inspection and leakage testing; conference-room acoustics; push-rod drainage-camera inspection; facade spray-rack water testing; and portable indoor air-quality measurement.
+The earlier engineering plant-room scene is recorded in `image-direction.md`. The first six new subjects were closed electrical switchgear inspection; HVAC duct inspection and leakage testing; conference-room acoustics; push-rod drainage-camera inspection; and portable indoor air-quality measurement.
 
 ## Additional subject prompts
 
@@ -17,7 +17,6 @@ The earlier engineering plant-room scene is recorded in `image-direction.md`. Th
 - **witness-verification:** Two independent commissioning engineers in navy workwear and white hard hats jointly witnessing a building pump-system functional test, one checking a tablet checklist while the other observes closed control cabinets and pressure gauges, immaculate contemporary mechanical plant room.
 - **vibration-analysis:** Close editorial view of a technician's gloved hand placing a magnetic vibration measurement sensor on the external bearing housing of a safely guarded building ventilation motor, a handheld vibration analyzer beside it, neat mechanical equipment in focus, no exposed rotating parts.
 - **property-inspection:** An engineer in navy workwear inspecting the installation quality of plumbing and ventilation in a newly finished commercial interior using a tablet checklist and a small inspection torch, clean accessible service cupboard, natural daylight, practical building handover inspection.
-- **energy-audit:** An energy performance specialist reviewing building energy consumption graphs on a laptop at a bright modern building control room desk, well-organized closed BMS control equipment and a contemporary shaded facade visible through glazing, restrained professional engineering atmosphere, screen graphs without readable text.
 - **facility-maintenance:** A facilities maintenance engineer in navy workwear and a white hard hat inspecting a tidy chilled-water pump and insulated pipes with a clipboard, modern building plant room with orderly equipment and clean floor, believable building operation and preventative care.
 - **commissioning-planning:** An overhead editorial view of a professional commissioning coordination meeting: engineering drawings of ventilation and plumbing systems on a clean oak table, two engineers' hands reviewing a plan with a tablet and a small checklist, warm ivory meeting room, no readable text or logos.
 - **retro-commissioning:** An engineer in navy workwear optimizing an existing building HVAC system: evaluating readings on a portable diagnostic tablet beside a clean older industrial air handling unit and insulated water pipes, practical well-maintained plant room, upgraded control hardware safely closed.

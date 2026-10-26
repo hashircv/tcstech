@@ -11,17 +11,14 @@ const serviceChecks: [string,string][] = [
   ['third-party-witness-and-verification','Follow-Up Support'],
   ['sound-and-vibration-testing-of-mechanical-equipments','Vibration Diagnostics'],
   ['acoustic-testing-for-interior-spaces','Speech Transmission Index'],
-  ['water-penetration-test','ASTM E331'],
   ['mep-health-check','Floor tile slope testing'],
-  ['energy-optimization-through-energy-audit','ASHRAE Level 3'],
-  ['facility-management','Ensuring Safety Standards'],
   ['indoor-air-quality-testing-service','How do you test air quality?'],
   ['commissioning-management','Verification and Handover'],
   ['re-commissioning-and-retro-commissioning','Educating Building Staff'],
   ['air-permeability-test-for-windows','Pressure Testing'],
   ['micro-camera-inspection-service-for-drainage-lines-hvac-ducting','50-meter flexible camera cable'],
 ];
-test('all 19 deep links contain their specific technical detail and working contents navigation',async({page})=>{
+test('all 16 deep links contain their specific technical detail and working contents navigation',async({page})=>{
   test.setTimeout(60000);
   const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
   for(const [slug,detail] of serviceChecks){
@@ -39,17 +36,17 @@ test('all 19 deep links contain their specific technical detail and working cont
 });
 test('catalogue search, category filter, quick panel and legacy paths reach full pages',async({page})=>{
   await page.goto(`${base}/services/`);
-  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(19);
+  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(16);
   await page.getByRole('searchbox',{name:'Search services'}).fill('micro');
   await expect(page.locator('.full-catalogue .service-card')).toHaveCount(1);
   await page.locator('.full-catalogue .service-card').click();
   await expect(page.locator('h1')).toHaveText('Micro-camera inspections');
   await page.goto(`${base}/services/?group=envelope`);
-  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(4);
+  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(3);
   await page.getByRole('searchbox').fill('no matching xyz');
   await expect(page.getByRole('heading',{name:'No matching services'})).toBeVisible();
   await page.getByRole('button',{name:'Show all services'}).click();
-  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(19);
+  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(16);
   await page.goto(base);
   await page.locator('.service-card').first().click();
   await page.getByRole('dialog').getByRole('link',{name:'Electrical cold & live testing'}).click();
@@ -91,17 +88,17 @@ test('contact form validates and prepares an email without pretending to send it
 test('expanded pages fit mobile and all service card images resolve',async({page,request})=>{
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.setViewportSize({width:390,height:844});
-  for(const slug of ['services','energy-optimization-through-energy-audit','mep-health-check','about','career','contact','completed','on-going','our-team','markets','news-insight']){
+  for(const slug of ['services','mep-health-check','about','career','contact','completed','on-going','our-team','markets','news-insight']){
     await page.goto(`${base}/${slug}/`);await expect(page.locator('h1')).toBeVisible();
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),slug).toBe(true);
   }
   await page.goto(`${base}/services/`);
-  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(19);
+  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(16);
   for(const image of await page.locator('.service-card-photo img').all()){const src=(await image.getAttribute('src'))!;const response=await request.get(`${base}${src}`);expect(response.ok(),src).toBe(true);expect(response.headers()['content-type']).toMatch(/^image\//);}
-  await page.goto(`${base}/services/`);await expect(page.locator('.full-catalogue .service-card')).toHaveCount(19);await page.screenshot({path:'test-results/services-mobile.png',fullPage:true});
+  await page.goto(`${base}/services/`);await expect(page.locator('.full-catalogue .service-card')).toHaveCount(16);await page.screenshot({path:'test-results/services-mobile.png',fullPage:true});
   await page.setViewportSize({width:1440,height:1000});
-  await page.goto(`${base}/energy-optimization-through-energy-audit/`);
-  await expect(page.locator('.detail-body')).toContainText('ASHRAE Level 3');
+  await page.goto(`${base}/services/`);
+  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(16);
   for(const image of await page.locator('.service-image-gallery img').all()){await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate(img=>(img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);}
   await page.evaluate(()=>window.scrollTo(0,0));
   await page.screenshot({path:'test-results/service-desktop.png',fullPage:true});

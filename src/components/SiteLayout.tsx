@@ -42,6 +42,7 @@ export function Header() {
             ["About us", "/about/"],
             ["Our expertise", "/services/"],
             ["Our projects", "/projects/"],
+            ["Certifications", "/certifications/"],
             ["Careers", "/career/"],
           ].map(([title, url]) => (
             <a
@@ -53,7 +54,11 @@ export function Header() {
               {title}
             </a>
           ))}
-          <a href="/contact/" className="button button-dark nav-contact">
+          <a
+            href="/contact/"
+            className="button button-dark nav-contact"
+            onClick={() => setOpen(false)}
+          >
             Contact us <ArrowUpRight size={16} />
           </a>
         </nav>

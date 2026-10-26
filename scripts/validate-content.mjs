@@ -34,7 +34,10 @@ for (const photo of media) {
   }
 }
 for (const asset of ['videos/tcs-hero.mp4', 'videos/tcs-hero-mobile.mp4',
-  'documents/completed-project-list.pdf', 'documents/ongoing-project-list.pdf']) {
+  'documents/completed-project-list.pdf', 'documents/ongoing-project-list.pdf',
+  'certifications/tcs-iso-9001-2015.pdf', 'certifications/tcs-iso-14001-2015.pdf',
+  'certifications/tcs-iso-45001-2018.pdf', 'certifications/iso-9001-preview-1.jpg',
+  'certifications/iso-14001-preview-1.jpg', 'certifications/iso-45001-preview-1.jpg']) {
   try { await fs.access(`public/${asset}`); }
   catch { errors.push(`Missing public asset: ${asset}`); }
 }

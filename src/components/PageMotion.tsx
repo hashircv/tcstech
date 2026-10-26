@@ -7,7 +7,7 @@ const animatedSections = [
   '.contact-info-card', '.enquiry-form', '.career-layout > .detail-body',
   '.market-grid > a', '.empty-state', '.project-overview-links > a',
   '.inline-page-links', '.page-tabs', '.related-services', '.directory-tools',
-  '.service-filters', '.document-link',
+  '.service-filters', '.document-link', '.certification-card',
 ].join(',');
 
 export function PageMotion({ children }: { children: ReactNode }) {

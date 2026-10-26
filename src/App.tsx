@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { Header, Footer } from './components/SiteLayout';
 import { usePageNavigation } from './hooks/usePageNavigation';
+import { homeSEO, updatePageSEO } from './data/seo';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const PageRouter = lazy(() => import('./pages/PageRouter'));
@@ -11,10 +12,7 @@ export default function App() {
   const isHome = ['/', '/solar-spark/', '/solar-spark'].includes(pathname);
 
   useEffect(() => {
-    if (!isHome) return;
-    document.title = 'TCS Building Energy Efficiency Services | Better buildings';
-    document.querySelector('meta[name="description"]')?.setAttribute('content',
-      'End-to-end building energy solutions, expert MEP engineering and healthier spaces in the UAE.');
+    if (isHome) updatePageSEO(homeSEO);
   }, [isHome]);
 
   return <>
