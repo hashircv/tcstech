@@ -19,7 +19,7 @@ The website uses React components and local content files. Updates require editi
 | Scroll reveal triggering and keyboard visibility | `src/components/Reveal.tsx` |
 | Service directory summaries and category assignments | `src/data/catalogue.ts` |
 | Complete service details and reference page content | `src/data/site-content.json` |
-| Six category images and 16 individual service images | `src/data/visuals.ts` |
+| Six category images and 15 individual service images | `src/data/visuals.ts` |
 | Service and project responsive image rendering | `src/components/ServicePhoto.tsx`, `ProjectPhoto.tsx` |
 | Completed and ongoing project images | `src/data/project-media.json` |
 | Route selection, page loading and document metadata | `src/pages/PageRouter.tsx` |
@@ -57,7 +57,7 @@ Run `npm run validate:content`, `npm run build`, and `npm run test:e2e`. Playwri
 - Contact and careers forms prepare email drafts; they do not deliver messages or store applications. Add a server endpoint or a form provider for direct submissions. Keep API credentials on the server.
 - The news page is a placeholder for genuine company updates; the reference site's spam/default posts were excluded.
 - Team biographies came from historical published content and should be confirmed before launch.
-- Every page layout has its own file and inner pages load on demand. The 16 active service URLs use one detail template with distinct service data; completed/ongoing portfolios use a shared portfolio component. Three retired service URLs redirect to the services directory. Update shared components to apply a consistent layout across those pages.
+- Every page layout has its own file and inner pages load on demand. The 15 active service URLs use one detail template with distinct service data; completed/ongoing portfolios use a shared portfolio component. Five retired service URLs redirect to the services directory. Update shared components to apply a consistent layout across those pages.
 - Service directory summaries and full descriptions are intentionally separate copy. Update both when a service changes; URL consistency is checked automatically.
 - CSS is mostly custom, with Tailwind available. Further design work should reuse existing components and tokens rather than introducing another styling system.
 - Route HTML provides metadata, while page content renders in React. Consider prerendering if search visibility becomes a priority.

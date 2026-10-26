@@ -24,7 +24,7 @@ export function Footer() {
           </nav>
           <nav className="footer-links" aria-label="Services and projects">
             <h2 className="footer-label">Our work</h2>
-            <a href="/services/">All 16 services</a>
+            <a href="/services/">All services</a>
             <a href="/completed/">Completed projects</a>
             <a href="/on-going/">Ongoing projects</a>
             <a href="/contact/">Contact us</a>

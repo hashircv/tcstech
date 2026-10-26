@@ -2,30 +2,31 @@
 
 Checked 1 October 2026 against the freshly fetched WordPress page collection at https://tcstech.me/. All 32 source pages match the previous snapshot after ignoring dynamic careers-form IDs and security tokens.
 
-All 16 active services have detail blocks, section navigation and responsive imagery. Three service offerings were retired at the owner's request; their old URLs redirect to the services directory. All 15 completed and 13 ongoing featured projects have a photo matched to their original reference entry. Published project scope descriptions remain present. Both original project-list PDFs remain available; additional PDF-only entries are available in those documents, rather than being presented as invented photo case studies.
+All 15 active services have detail blocks, section navigation and responsive imagery. Five service URLs redirect to the services directory following the owner's latest service changes. All 15 completed and 13 ongoing featured projects have a photo matched to their original reference entry. Published project scope descriptions remain present. Both original project-list PDFs remain available; additional PDF-only entries are available in those documents, rather than being presented as invented photo case studies.
 
 Each active service has its own distinct illustrative generated photograph, selected for its technical subject. All are optimized as 1536px and 640px WebP variants. Project photographs are original reference-site images, not generated pictures of named projects.
 
 ## Services
 
-| Reference service | Detail blocks | Sections | Image | Full resolution |
-|---|---:|---:|---|---|
-| [Building envelope testing](https://tcstech.me/building-envelop-testing/) | 26 | 9 | thermal-imaging.webp | 1536 × 1024 |
-| [U-value testing](https://tcstech.me/u-value-testing-services/) | 19 | 7 | heat-flux.webp | 1536 × 1024 |
-| [Duct leakage testing](https://tcstech.me/duct-leakage-testing-services/) | 84 | 21 | duct-inspection.webp | 1536 × 1024 |
-| [MEP testing & commissioning](https://tcstech.me/testing-commissioning-of-mep-system/) | 47 | 11 | engineering.webp | 1536 × 1024 |
-| [Duct cleaning & restoration](https://tcstech.me/duck-cleaning/) | 23 | 5 | duct-cleaning.webp | 1536 × 1024 |
-| [Electrical cold & live testing](https://tcstech.me/electrical-third-party-cold-live-testing-services/) | 63 | 12 | electrical.webp | 1536 × 1024 |
-| [Testing, adjusting & balancing](https://tcstech.me/testing-and-balancing/) | 27 | 9 | air-balancing.webp | 1536 × 1024 |
-| [Third-party witness & verification](https://tcstech.me/third-party-witness-and-verification/) | 36 | 10 | witness-verification.webp | 1536 × 1024 |
-| [Sound & vibration testing](https://tcstech.me/sound-and-vibration-testing-of-mechanical-equipments/) | 29 | 5 | vibration-analysis.webp | 1536 × 1024 |
-| [Interior acoustic testing](https://tcstech.me/acoustic-testing-for-interior-spaces/) | 37 | 11 | acoustics.webp | 1536 × 1024 |
-| [MEP health check & snagging](https://tcstech.me/mep-health-check/) | 68 | 22 | property-inspection.webp | 1536 × 1024 |
-| [Indoor air quality testing](https://tcstech.me/indoor-air-quality-testing-service/) | 21 | 9 | air-quality.webp | 1536 × 1024 |
-| [Commissioning management](https://tcstech.me/commissioning-management/) | 27 | 7 | commissioning-planning.webp | 1536 × 1024 |
-| [Re-commissioning & retro-commissioning](https://tcstech.me/re-commissioning-and-retro-commissioning/) | 29 | 9 | retro-commissioning.webp | 1536 × 1024 |
-| [Window air permeability testing](https://tcstech.me/air-permeability-test-for-windows/) | 20 | 6 | window-pressure.webp | 1536 × 1024 |
-| [Micro-camera inspections](https://tcstech.me/micro-camera-inspection-service-for-drainage-lines-hvac-ducting/) | 45 | 10 | camera-inspection.webp | 1536 × 1024 |
+| Service | Detail content | Image | Standards shown |
+|---|---|---|---|
+| Commissioning management (CxA) | Preserved reference content | commissioning-planning.webp | ASHRAE, CIBSE, NEBB, BSRIA, CSA |
+| Testing, adjusting & balancing (TAB) | Preserved reference content | air-balancing.webp | ASHRAE, CIBSE, NEBB, BSRIA, CSA |
+| Electrical cold & live testing | Preserved reference content | electrical.webp | DEWA, ADDC, IEEE |
+| Third-party witness & verification | Preserved reference content | witness-verification.webp | ASHRAE, CIBSE, NEBB, BSRIA, CSA |
+| Duct leakage testing (DALT) | Preserved reference content | duct-inspection.webp | SMACNA, DW144 |
+| Duct cleaning & restoration | Preserved reference content | duct-cleaning.webp | NADCA |
+| Sound & vibration testing | Preserved reference content | vibration-analysis.webp | — |
+| Interior acoustic testing | Preserved reference content | acoustics.webp | — |
+| Indoor air quality testing (IAQ) | Preserved reference content | air-quality.webp | DM-HSD-GU119-IAQ, LEED v5/v4, WELL |
+| Re-commissioning & retro-commissioning | Preserved reference content | retro-commissioning.webp | — |
+| Blower door / room integrity test (FM 200) | Preserved reference content | window-pressure.webp | — |
+| Thermal Imaging | New standalone detail page based on existing TCS thermal imaging references | thermal-imaging.webp | — |
+| U-value testing | Preserved reference content | heat-flux.webp | — |
+| Micro-camera inspections | Preserved reference content | camera-inspection.webp | — |
+| Property Inspection and Snagging | Existing inspection content under the updated service name | property-inspection.webp | — |
+
+All active service images have 1536px and 640px WebP variants. Project photographs are original reference-site images, not generated pictures of named projects.
 
 ## Featured projects
 

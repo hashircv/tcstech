@@ -7,7 +7,7 @@
   "serviceTitleTemplate": "{title} Services in Dubai | TCS",
   "serviceDescriptionTemplate": "{description} TCS supports buildings in Dubai and across the UAE with specialist testing, engineering and documented recommendations.",
   "pages": {
-    "services": { "title": "Building Energy Efficiency Services in Dubai | TCS", "description": "Explore 16 TCS building energy services in Dubai and across the UAE, including MEP commissioning, recommissioning, HVAC testing and building envelope assessments." },
+    "services": { "title": "Building Energy Efficiency Services in Dubai | TCS", "description": "Explore 15 TCS building energy services in Dubai and across the UAE, including commissioning management, thermal imaging, HVAC testing and building envelope assessments." },
     "about": { "title": "About TCS | Building Energy Efficiency in Dubai", "description": "Learn about TCS, a Dubai based building energy efficiency and MEP engineering services provider supporting projects across the UAE since 2017." },
     "our-team": { "title": "TCS Engineering Team | Dubai, UAE", "description": "Meet the TCS engineers and technical specialists delivering MEP testing, commissioning and building performance services in the UAE." },
     "projects": { "title": "TCS Building Projects Across the UAE", "description": "Explore TCS building performance projects across the UAE, with completed and ongoing work in hospitality, commercial and residential buildings." },
@@ -20,7 +20,6 @@
     "news-insight": { "title": "TCS News and Engineering Insights", "description": "TCS updates and information about building energy efficiency, building systems and engineering services." }
   },
   "indexedTitleOverrides": {
-    "testing-commissioning-of-mep-system": "Testing and Commissioning Services at TCS in the UAE",
     "testing-and-balancing": "Testing, Adjusting and Balancing Services in Dubai | TCS",
     "indoor-air-quality-testing-service": "Indoor Air Quality Testing Services at TCS in Dubai",
     "re-commissioning-and-retro-commissioning": "TCS Retro Commissioning Services in the UAE"

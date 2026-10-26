@@ -22,7 +22,7 @@ export function ServicesPage() {
       <PageHero
         title="Every service. Every detail."
         eyebrow="OUR EXPERTISE"
-        description="16 specialist services, connected by one purpose: better-performing buildings. Explore the full scope, methods and reporting behind each service."
+        description={`${catalogue.length} specialist services, connected by one purpose: better-performing buildings. Explore the full scope, methods and reporting behind each service.`}
       />
       <section className="section-shell directory-section">
         <div className="directory-tools">

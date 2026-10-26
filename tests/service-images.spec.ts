@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 
-test('all 16 services have distinct responsive images and WhatsApp enquiries are available',async({page})=>{
+test('all 15 services have distinct responsive images and WhatsApp enquiries are available',async({page})=>{
   test.setTimeout(60000);
   await page.setViewportSize({width:390,height:900});
   await page.emulateMedia({reducedMotion:'reduce'});
@@ -9,7 +9,7 @@ test('all 16 services have distinct responsive images and WhatsApp enquiries are
   const homeSources=await page.locator('.service-card-photo img').evaluateAll(images=>images.map(image=>image.getAttribute('src')));
   expect(new Set(homeSources).size).toBe(6);
   await page.goto('http://127.0.0.1:5174/services/');
-  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(16);
+  await expect(page.locator('.full-catalogue .service-card')).toHaveCount(15);
   const cards=page.locator('.full-catalogue .service-card');
   const sources=new Set<string>();
   const links:string[]=[];
@@ -21,7 +21,7 @@ test('all 16 services have distinct responsive images and WhatsApp enquiries are
     links.push((await card.getAttribute('href'))!);
     expect(await image.evaluate(i=>(i as HTMLImageElement).currentSrc)).toContain('-640.webp');
   }
-  expect(sources.size).toBe(16);
+  expect(sources.size).toBe(15);
   for(const link of links){
     await page.goto(`http://127.0.0.1:5174${link}`);
     const image=page.locator('.service-image-gallery img');
@@ -35,7 +35,7 @@ test('all 16 services have distinct responsive images and WhatsApp enquiries are
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   }
   await page.goto('http://127.0.0.1:5174/services/');
-  await expect(cards).toHaveCount(16);
+  await expect(cards).toHaveCount(15);
   await cards.first().locator('img').evaluate(i=>(i as HTMLImageElement).decode());
   await page.screenshot({path:'test-results/services-unique-mobile.png'});
   await page.setViewportSize({width:1440,height:900});

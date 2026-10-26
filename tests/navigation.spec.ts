@@ -10,13 +10,13 @@ test('internal navigation and browser history preserve the header and footer', a
   }));
   await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Our expertise' }).click();
   await expect(page.locator('h1')).toContainText('Every service. Every detail.');
-  await page.locator('.full-catalogue .service-card').first().click();
-  await expect(page.locator('h1')).toContainText('Building envelope testing');
+  await page.getByRole('link', { name: /Blower door \/ room integrity test/ }).click();
+  await expect(page.locator('h1')).toHaveText('Blower door / room integrity test (FM 200)');
   await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Contact us' }).click();
   await expect(page.locator('h1')).toContainText('Let’s build something better.');
   await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Contact us' }).click();
   await page.goBack();
-  await expect(page.locator('h1')).toContainText('Building envelope testing');
+  await expect(page.locator('h1')).toHaveText('Blower door / room integrity test (FM 200)');
   await page.goForward();
   await expect(page.locator('h1')).toContainText('Let’s build something better.');
   expect(await page.evaluate(() => {

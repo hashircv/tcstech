@@ -17,6 +17,7 @@ import type { Service } from "../data/content";
 import { ProjectPhoto } from "../components/ProjectPhoto";
 import { HeroBanner } from "../components/HeroBanner";
 import { ServicePhoto } from "../components/ServicePhoto";
+import { catalogue } from "../data/catalogue";
 import "./home-motion.css";
 
 const icons = [SlidersHorizontal, Leaf, Building2, Activity, Wind, ShieldCheck];
@@ -164,7 +165,7 @@ export default function HomePage() {
           </div>
           <div className="all-services-link">
             <a className="button button-dark" href="/services/">
-              Browse all 16 services <ArrowUpRight size={18} />
+              Browse all {catalogue.length} services <ArrowUpRight size={18} />
             </a>
           </div>
           <p className="services-note">

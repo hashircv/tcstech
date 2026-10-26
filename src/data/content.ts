@@ -13,8 +13,7 @@ export const services: Service[] = [
     description:
       "Confidence in every system. Verify that your building performs as it was designed to.",
     items: [
-      "MEP system testing and commissioning",
-      "Commissioning management",
+      "Commissioning management (CxA)",
       "Third-party witness and verification",
       "Electrical cold and live testing",
     ],
@@ -38,9 +37,9 @@ export const services: Service[] = [
     description:
       "A better barrier between inside and outside. Identify leaks, heat loss, and performance gaps.",
     items: [
-      "Thermal imaging and blower door testing",
+      "Blower door and room integrity testing",
+      "Thermal imaging",
       "U-value testing",
-      "Window air permeability testing",
     ],
   },
   {
@@ -76,7 +75,7 @@ export const services: Service[] = [
     description:
       "Support your building beyond handover with practical care and detailed system inspections.",
     items: [
-      "MEP pre-handover inspection and snagging",
+      "Property inspection and snagging",
       "Integrated mechanical, electrical and plumbing solutions",
     ],
   },
@@ -121,9 +120,9 @@ export const projects = [
 ];
 export const contact = {
   email: "info@tcstech.me",
-  phone: "+971 56 409 0854",
+  phone: "+971 564090854",
   phoneLink: "+971564090854",
-  secondaryPhone: "+971 56 969 4333",
+  secondaryPhone: "+971 569694333",
   secondaryPhoneLink: "+971569694333",
   whatsappNumber: "971555289611",
   address:

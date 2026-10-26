@@ -34,7 +34,7 @@ export function ContactPage() {
           </a>
         </div>
       </div>
-      <EnquiryForm/>
+      <EnquiryForm />
     </section>
   </>;
 }

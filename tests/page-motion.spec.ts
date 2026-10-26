@@ -21,7 +21,7 @@ test('keyboard focus immediately exposes an animated contact form', async ({ pag
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('http://127.0.0.1:5174/contact/');
-  await page.getByLabel('Full name').focus();
+  await page.getByLabel('Name').focus();
   await expect(page.locator('.enquiry-form')).toHaveClass(/page-motion-visible/);
   expect(await page.locator('.enquiry-form').evaluate(node => getComputedStyle(node).opacity)).toBe('1');
 });

@@ -4,15 +4,6 @@ interface Block {
   text: string;
   href?: string;
 }
-function localLink(href = "") {
-  if (href.endsWith("/project-list.pdf"))
-    return "/documents/completed-project-list.pdf";
-  if (href.endsWith("/TCS-ON-GOING-PROJECTS.pdf"))
-    return "/documents/ongoing-project-list.pdf";
-  if (href.startsWith("https://tcstech.me/") && !href.includes("/wp-content/"))
-    return href.replace("https://tcstech.me", "");
-  return /^(https?:\/\/|mailto:|tel:|\/|#)/.test(href) ? href : "#";
-}
 function Paragraphs({ blocks }: { blocks: Block[] }) {
   const nodes = [];
   for (let i = 0; i < blocks.length; i++) {
@@ -36,7 +27,7 @@ function Paragraphs({ blocks }: { blocks: Block[] }) {
       );
     } else if (block.type === "link")
       nodes.push(
-        <a className="text-link" href={localLink(block.href)} key={i}>
+        <a className="text-link" href={block.href || "#"} key={i}>
           {block.text}
           <ArrowUpRight size={16} />
         </a>,

@@ -2,9 +2,9 @@
 
 Audit date: 30 September 2026. Source: WordPress public REST page collection, current page sitemap, linked public pages and documents.
 
-Rechecked on 1 October 2026 against a fresh live page collection. The source contained 19 service pages and 28 featured project entries. Three service offerings were later retired at the owner's request; their legacy URLs redirect to `/services/`. The 16 active service pages and featured projects have distinct subject-specific/matched images. See [the coverage check](coverage-check.md) for the active inventory.
+Rechecked on 1 October 2026 against a fresh live page collection. The source contained 19 service pages and 28 featured project entries. Five service URLs now redirect to `/services/` following the owner's service changes. The 15 active service pages and featured projects have distinct subject-specific/matched images. See [the coverage check](coverage-check.md) for the active inventory.
 
-32 published WordPress pages audited; 16 active service pages remain in the new site. Retired service URLs redirect to `/services/`. Retained service content is structured except exact duplicates, malformed markup, irrelevant pasted text and unfinished editorial instructions described below.
+32 published WordPress pages audited; 15 active service pages remain in the new site. Retired service URLs redirect to `/services/`. Retained service content is structured except exact duplicates, malformed markup, irrelevant pasted text and unfinished editorial instructions described below.
 
 | Original path | Page | Treatment |
 |---|---|---|

@@ -32,9 +32,38 @@
   line-height: 2;
   color: #707e60;
 }
-.navigation a[aria-current="page"] {
-  text-decoration: underline;
-  text-underline-offset: 6px;
+.navigation > a[aria-current="page"]:not(.button) {
+  position: relative;
+  color: #25573c;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navigation > a[aria-current="page"]:not(.button)::after {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #25573c, #91a96a);
+  content: "";
+}
+@media (max-width: 760px) {
+  .navigation > a[aria-current="page"]:not(.button) {
+    padding: 12px 15px 12px 18px;
+    border-radius: 13px;
+    background: #e9eedf;
+  }
+  .navigation > a[aria-current="page"]:not(.button)::after {
+    top: 13px;
+    right: auto;
+    bottom: 13px;
+    left: 0;
+    width: 3px;
+    height: auto;
+    border-radius: 99px;
+    background: #4b7650;
+  }
 }
 .page-loading {
   min-height: 70vh;

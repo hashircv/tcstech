@@ -54,13 +54,14 @@ export function EnquiryForm({ career = false }: { career?: boolean }) {
       </p>
       <div className="form-grid">
         <label>
-          Full name
-          <input name="Name" autoComplete="name" required maxLength={100} />
+          {career ? "Full name" : "Name"}
+          <input name="Name" placeholder="Name" autoComplete="name" required maxLength={100} />
         </label>
         <label>
-          Email address
+          {career ? "Email address" : "Email"}
           <input
             name="Email"
+            placeholder="Email"
             type="email"
             autoComplete="email"
             required
@@ -68,7 +69,7 @@ export function EnquiryForm({ career = false }: { career?: boolean }) {
           />
         </label>
         <label>
-          Phone number{!career && " (optional)"}
+          {career ? "Phone number" : "Mobile no (optional)"}
           <input
             name="Phone"
             type="tel"
@@ -163,9 +164,10 @@ export function EnquiryForm({ career = false }: { career?: boolean }) {
         )}
       </div>
       <label>
-        {career ? "Career goal / cover letter" : "Your message"}
+        {career ? "Career goal / cover letter" : "Message"}
         <textarea
           name={career ? "Career goal / cover letter" : "Message"}
+          placeholder={career ? undefined : "Your Message"}
           rows={5}
           required
           maxLength={2500}
@@ -174,16 +176,8 @@ export function EnquiryForm({ career = false }: { career?: boolean }) {
       {career && (
         <>
           <p className="form-note">
-            CV / résumé: attach a PDF, DOC or DOCX file to your email before
-            sending. To upload it directly instead, use the{" "}
-            <a
-              href="https://tcstech.me/career/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              existing online application form
-            </a>
-            .
+            Attach your CV or résumé to the email draft before sending. This
+            form does not upload or store files.
           </p>
           <label className="checkbox-label">
             <input
@@ -198,11 +192,12 @@ export function EnquiryForm({ career = false }: { career?: boolean }) {
       )}
       <button className="button button-dark" type="submit">
         <Mail size={17} />
-        Prepare email
+        {career ? "Prepare email" : "Send"}
       </button>
       <p className="form-note">
-        Nothing is submitted or stored by this form. You review and send the
-        message in your email app.
+        {career
+          ? "Nothing is submitted or stored by this form. You review and send the message in your email app."
+          : "Send prepares an email draft for you to review. This form does not store submissions."}
       </p>
       {draft && (
         <div className="draft-ready" role="status">

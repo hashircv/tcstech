@@ -7,6 +7,20 @@ const catalogueSlugs = [...catalogue.matchAll(/slug:\s*["']([^"']+)["']/g)].map(
 const serviceSlugs = content.services.map(service => service.slug);
 const errors = [];
 
+function findLegacyWordPressLinks(value, path = '$') {
+  if (typeof value === 'string' && /^https?:\/\/(www\.)?tcstech\.me\//i.test(value)) {
+    errors.push(`Legacy site URL must use local content or assets: ${path}`);
+  } else if (Array.isArray(value)) {
+    value.forEach((item, index) => findLegacyWordPressLinks(item, `${path}[${index}]`));
+  } else if (value && typeof value === 'object') {
+    for (const [key, child] of Object.entries(value)) {
+      findLegacyWordPressLinks(child, `${path}.${key}`);
+    }
+  }
+}
+findLegacyWordPressLinks(content, 'site-content');
+findLegacyWordPressLinks(media, 'project-media');
+
 if (new Set(serviceSlugs).size !== serviceSlugs.length) errors.push('Duplicate service URLs');
 for (const slug of new Set([...serviceSlugs, ...catalogueSlugs])) {
   if (!serviceSlugs.includes(slug) || !catalogueSlugs.includes(slug)) {

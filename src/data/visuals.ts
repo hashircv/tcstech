@@ -12,8 +12,8 @@ export const serviceVisuals: Record<string, { src: string; alt: string }> = {
     alt: "Illustrative facilities engineer inspecting a chilled-water pump and building pipework",
   },
   envelope: {
-    src: "/images/editorial/thermal-imaging.webp",
-    alt: "Illustrative engineer assessing building envelope performance with a thermal imaging camera",
+    src: "/images/editorial/window-pressure.webp",
+    alt: "Illustrative blower door fan and pressure instruments used to assess building airtightness",
   },
   energy: {
     src: "/images/editorial/retro-commissioning.webp",
@@ -27,8 +27,12 @@ export const serviceVisuals: Record<string, { src: string; alt: string }> = {
 
 const specificVisuals: Record<string, { src: string; alt: string }> = {
   "building-envelop-testing": {
+    src: "/images/editorial/window-pressure.webp",
+    alt: "Illustrative engineer conducting a blower door airtightness test in a glazed room",
+  },
+  "thermal-imaging": {
     src: "/images/editorial/thermal-imaging.webp",
-    alt: "Illustrative engineer using a thermal camera to assess a building facade",
+    alt: "Illustrative thermal imaging survey showing heat patterns across a building facade",
   },
   "u-value-testing-services": {
     src: "/images/editorial/heat-flux.webp",
@@ -37,10 +41,6 @@ const specificVisuals: Record<string, { src: string; alt: string }> = {
   "duct-leakage-testing-services": {
     src: "/images/editorial/duct-inspection.webp",
     alt: "Illustrative technician assessing duct leakage with a test fan and pressure instruments",
-  },
-  "testing-commissioning-of-mep-system": {
-    src: "/images/editorial/engineering.webp",
-    alt: "Illustrative commissioning engineer assessing integrated systems in a mechanical plant room",
   },
   "electrical-third-party-cold-live-testing-services": {
     src: "/images/editorial/electrical.webp",
@@ -76,7 +76,7 @@ const specificVisuals: Record<string, { src: string; alt: string }> = {
   },
   "mep-health-check": {
     src: "/images/editorial/property-inspection.webp",
-    alt: "Illustrative engineer inspecting plumbing installation quality before building handover",
+    alt: "Illustrative property inspector documenting a building condition before handover",
   },
   "commissioning-management": {
     src: "/images/editorial/commissioning-planning.webp",
@@ -85,10 +85,6 @@ const specificVisuals: Record<string, { src: string; alt: string }> = {
   "re-commissioning-and-retro-commissioning": {
     src: "/images/editorial/retro-commissioning.webp",
     alt: "Illustrative engineer assessing and optimizing an existing air handling system",
-  },
-  "air-permeability-test-for-windows": {
-    src: "/images/editorial/window-pressure.webp",
-    alt: "Illustrative technician testing window airtightness with a sealed chamber and pressure instruments",
   },
 };
 

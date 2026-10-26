@@ -30,6 +30,16 @@ export function ServiceDetailPage({ service }: { service: ServicePage }) {
             />
           </figure>
         </div>
+        {service.standards && service.standards.length > 0 && (
+          <section className="service-standards" aria-label="Applicable standards and guidance">
+            <p className="eyebrow">STANDARDS &amp; GUIDANCE</p>
+            <ul>
+              {service.standards.map((standard) => (
+                <li key={standard}>{standard}</li>
+              ))}
+            </ul>
+          </section>
+        )}
         <ContentArticle blocks={service.blocks} />
         {related.length > 0 && (
           <section className="related-services">

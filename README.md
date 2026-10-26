@@ -1,6 +1,6 @@
 # TCS Building Energy Efficiency Services
 
-Responsive React, TypeScript, Vite and Tailwind CSS website with 16 active service detail pages, a certifications page, 15 completed projects, 13 ongoing projects and the original downloadable project lists.
+Responsive React, TypeScript, Vite and Tailwind CSS website with 15 active service detail pages, a certifications page, 15 completed projects, 13 ongoing projects and the original downloadable project lists.
 
 ## Local development
 
@@ -18,7 +18,7 @@ npm run build
 npm run preview
 ```
 
-The build produces `dist/`, including 41 route entry points, canonical metadata, a sitemap, robots.txt and legacy redirects. All final images, videos, certificates and project PDFs are local assets and are included automatically. Raw WordPress downloads, original authoring media and one-time migration tools are excluded from this repository.
+The build produces `dist/`, including 42 route entry points, canonical metadata, a sitemap, robots.txt and legacy redirects. All final images, videos, certificates and project PDFs are local assets and are included automatically. Raw WordPress downloads, original authoring media and one-time migration tools are excluded from this repository.
 
 To deploy from GitHub on Netlify:
 
@@ -54,6 +54,6 @@ Dependencies, caches, build outputs and test reports are ignored by Git. Keep `p
 npm run test:e2e
 ```
 
-Playwright starts the development server on `http://127.0.0.1:5174` automatically. Browser tests use installed Microsoft Edge; change the channel in `playwright.config.ts` if needed. Tests verify all 16 active service deep links, project images, mobile layouts, WhatsApp links and reduced-motion behavior.
+Playwright starts the development server on `http://127.0.0.1:5174` automatically. Browser tests use installed Microsoft Edge; change the channel in `playwright.config.ts` if needed. Tests verify all 15 active service deep links, project images, mobile layouts, WhatsApp links and reduced-motion behavior.
 
 See [maintenance.md](docs/maintenance.md) for where to edit every page and feature, [coverage-check.md](docs/coverage-check.md) for the verified source inventory and [service-image-prompts.md](docs/service-image-prompts.md) for generated-image provenance.
