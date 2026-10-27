@@ -43,6 +43,7 @@ const slides = [
 
 export function HeroBanner() {
   const [active, setActive] = useState(0);
+  const [loadedSlides, setLoadedSlides] = useState([0]);
   const [paused, setPaused] = useState(false);
   const [interacting, setInteracting] = useState(false);
   const [visible, setVisible] = useState(!document.hidden);
@@ -56,6 +57,11 @@ export function HeroBanner() {
   );
   const banner = useRef<HTMLElement>(null);
   const backgroundVideo = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    // Retain visited images for smooth crossfades without downloading every
+    // hidden slide during the initial page load.
+    setLoadedSlides((loaded) => loaded.includes(active) ? loaded : [...loaded, active]);
+  }, [active]);
   useEffect(() => {
     const media = matchMedia("(prefers-reduced-motion: reduce)");
     const viewport = matchMedia("(max-width:760px)");
@@ -121,7 +127,7 @@ export function HeroBanner() {
               className={`hero-scene ${index === active ? "is-active" : ""}`}
               aria-hidden={index !== active}
             >
-              <img
+              {(index === active || loadedSlides.includes(index)) && <img
                 src={
                   slide.video
                     ? "/images/editorial/tcs-video-poster.webp"
@@ -130,7 +136,7 @@ export function HeroBanner() {
                 srcSet={
                   slide.video
                     ? undefined
-                    : `/images/editorial/${slide.image}-640.webp 640w, /images/editorial/${slide.image}.webp 1536w`
+                    : `/images/editorial/${slide.image}-640.webp 640w, /images/editorial/${slide.image}-960.webp 960w, /images/editorial/${slide.image}.webp 1536w`
                 }
                 sizes="100vw"
                 alt={slide.alt}
@@ -138,7 +144,7 @@ export function HeroBanner() {
                 width="1536"
                 height="1024"
                 style={{ objectPosition: slide.position }}
-              />
+              />}
               {slide.video &&
                 index === active &&
                 !reduced &&

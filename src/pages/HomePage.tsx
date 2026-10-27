@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import {
   ArrowUpRight,
   Activity,
@@ -11,7 +11,6 @@ import {
   Wind,
 } from "lucide-react";
 import { Reveal } from "../components/Reveal";
-import { ServiceDialog } from "../components/ServiceDialog";
 import { contact, projects, services } from "../data/content";
 import type { Service } from "../data/content";
 import { ProjectPhoto } from "../components/ProjectPhoto";
@@ -19,6 +18,10 @@ import { HeroBanner } from "../components/HeroBanner";
 import { ServicePhoto } from "../components/ServicePhoto";
 import { catalogue } from "../data/catalogue";
 import "./home-motion.css";
+
+const ServiceDialog = lazy(() =>
+  import("../components/ServiceDialog").then((module) => ({ default: module.ServiceDialog })),
+);
 
 const icons = [SlidersHorizontal, Leaf, Building2, Activity, Wind, ShieldCheck];
 const filters = [
@@ -353,7 +356,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <ServiceDialog service={selected} onClose={() => setSelected(null)} />
+      {selected && <Suspense fallback={null}>
+        <ServiceDialog service={selected} onClose={() => setSelected(null)} />
+      </Suspense>}
     </div>
   );
 }

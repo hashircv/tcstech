@@ -23,5 +23,6 @@
   .hero-slide-dots button[aria-pressed=true] span{width:26px}
 }
 .hero-background-video{filter:none}
+.hero-banner .hero-banner-content>h1{animation:none}
 @keyframes home-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}.hero-banner-content>.eyebrow,.hero-banner-content>h1,.hero-banner-content>.hero-banner-description,.hero-banner-content>.hero-banner-actions{animation:home-enter .8s cubic-bezier(.2,.7,.2,1) both}.hero-banner-content>h1{animation-delay:.12s}.hero-banner-content>.hero-banner-description{animation-delay:.24s}.hero-banner-content>.hero-banner-actions{animation-delay:.36s}.hero-slide-caption{animation:home-enter .55s ease both}@media(prefers-reduced-motion:reduce){.hero-banner-content>*,.hero-slide-caption{animation:none}}
 

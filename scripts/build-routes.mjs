@@ -36,6 +36,7 @@ function routeHtml(route) {
     isPartOf: { '@id': `${root}/#website` }, publisher: { '@id': `${root}/#business` },
   };
   return template
+    .replace(/\s*<link\b[^>]*data-home-hero[^>]*>/g, '')
     .replace(/<title>[^<]*<\/title>/, `<title>${esc(finalTitle)}</title>`)
     .replace(/(<meta name="description" content=")[^"]*("\s*\/?>)/, `$1${esc(description)}$2`)
     .replace(/(<link rel="canonical" href=")[^"]*("\s*\/?>)/, `$1${canonical}$2`)

@@ -54,6 +54,12 @@ Run `npm run validate:content`, `npm run build`, and `npm run test:e2e`. Playwri
 
 ## Current limits and future changes
 
+Homepage loading: keep `site-content.json` behind the inner-page router. Shared helpers such as `seo.ts` must not import the full content archive; the router resolves aliases before generating metadata. Service dialogs load on first use. Hero images load when selected and remain available for later crossfades; the first image is responsively preloaded from the HTML. `build-routes.mjs` removes that home-only preload from inner-page HTML.
+
+The 2026-10-26 production check at a 390px viewport reduced initial homepage JavaScript from 381,855 to 279,357 bytes (26.8%). The sum of individual gzip sizes fell from 116,587 to 88,218 bytes (24.3%); actual transfer depends on hosting compression. These are local payload measurements, not a new PageSpeed score. Deploy the new build and rerun the same mobile/desktop PageSpeed report to compare LCP, blocking time and the performance score. `tests/homepage-loading.spec.ts` guards deferred content, dialog loading and carousel media.
+
+The shared mobile PageSpeed report (`klt5jrnbgo`, 2026-10-26) recorded performance 77, LCP 4.1s, CLS 0.198 and TBT 0ms. It identified the footer as the layout-shift victim, oversized carousel images, and the PNG logo without dimensions. Loading placeholders now reserve at least one viewport so the footer is not displayed then displaced by the lazy page. `Brand.tsx` uses a 430×177 WebP with explicit dimensions (30,674 bytes); the original PNG remains the authoring/structured-data reference. The carousel and first-image preload share 640/960/1536px candidates so a 412px phone at DPR 1.75 can select the 118,206-byte architecture image rather than the former 351,868-byte full image. Keep both srcset declarations in sync when replacing hero media. Layout and high-density image selection have browser regression coverage.
+
 - Contact and careers forms prepare email drafts; they do not deliver messages or store applications. Add a server endpoint or a form provider for direct submissions. Keep API credentials on the server.
 - The news page is a placeholder for genuine company updates; the reference site's spam/default posts were excluded.
 - Team biographies came from historical published content and should be confirmed before launch.

@@ -1,4 +1,3 @@
-import content from './site-content.json';
 import settings from './seo.json';
 
 type PageSEO = { title: string; description: string; canonical: string; structuredData: Record<string, unknown> };
@@ -20,8 +19,9 @@ export function getPageSEO(slug: string, service?: { title: string; description:
   const description = shortDescription(service
     ? settings.serviceDescriptionTemplate.replace('{description}', service.description)
     : staticPage?.description ?? 'Explore TCS building energy engineering and project services across Dubai and the UAE.');
-  const canonicalSlug = content.aliases[slug as keyof typeof content.aliases] ?? slug;
-  const canonical = unknown ? '' : `${siteUrl}${canonicalSlug ? `/${canonicalSlug}/` : '/'}`;
+  // PageRouter resolves legacy aliases before requesting metadata. Keeping the
+  // full page archive out of this shared helper avoids shipping it on home.
+  const canonical = unknown ? '' : `${siteUrl}${slug ? `/${slug}/` : '/'}`;
   const structuredData: Record<string, unknown> = service ? {
     '@context': 'https://schema.org',
     '@type': 'Service',
