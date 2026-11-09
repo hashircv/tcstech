@@ -59,14 +59,11 @@ test('catalogue search, category filter, quick panel and legacy paths reach full
     await expect(page.locator('h1')).toHaveText('Every service. Every detail.');
   }
 });
-test('all project entries, original PDFs, company values, team and careers are present',async({page,request})=>{
-  await page.goto(`${base}/completed/`);
-  await expect(page.locator('.portfolio-card')).toHaveCount(15);
-  await expect(page.locator('.portfolio-grid')).toContainText('ENBD, Electra Branch');
-  await page.goto(`${base}/on-going/`);
-  await expect(page.locator('.portfolio-card')).toHaveCount(13);
-  await expect(page.locator('.portfolio-grid')).toContainText('Ministry of Finance');
-  for(const file of ['completed','ongoing']){const response=await request.get(`${base}/documents/${file}-project-list.pdf`);expect(response.ok()).toBe(true);expect((await response.body()).subarray(0,4).toString()).toBe('%PDF');}
+test('all project entries, company values, team and careers are present',async({page})=>{
+  await page.goto(`${base}/projects/`);
+  await expect(page.locator('.portfolio-card')).toHaveCount(32);
+  await expect(page.locator('.portfolio-grid')).toContainText('Golf Hillside');
+  await expect(page.locator('.portfolio-grid')).toContainText('Dubai Holding head quarters');
   await page.goto(`${base}/about/`);
   await expect(page.getByRole('heading',{name:'Technical rigour, guided by care.'})).toBeVisible();
   await expect(page.getByRole('heading',{name:'A reliable process is part of a reliable result.'})).toBeVisible();
@@ -77,24 +74,32 @@ test('all project entries, original PDFs, company values, team and careers are p
   await expect(page.getByLabel('Qualification')).toBeVisible();
   await expect(page.getByText('This form does not upload or store files.')).toBeVisible();
 });
-test('contact form validates and prepares an email without pretending to send it',async({page})=>{
+test('contact form validates and opens a prefilled WhatsApp message',async({page})=>{
     await page.goto(`${base}/contact/`);
     await expect(page.getByRole('navigation', {name:'Main navigation'}).getByRole('link', {name:'Contact us'})).toHaveAttribute('href','/contact/');
-    await expect(page.getByRole('link', {name:'Start a conversation'})).toHaveAttribute('href',/^https:\/\/wa.me\/971555289611/);
+    await expect(page.getByRole('link', {name:'Start a conversation'})).toHaveAttribute('href',/^https:\/\/wa.me\/971564090854/);
   await expect(page.locator('#main').getByRole('link',{name:'+971 564090854'})).toHaveAttribute('href','tel:+971564090854');
+  await expect(page.locator('#main').getByRole('heading',{name:'Abu Dhabi office'})).toBeVisible();
+  await expect(page.locator('#main').getByText('Office 13, Plot No. 50, Sector M26, Ad Diman 6 Street, Musaffah, Abu Dhabi 20313, United Arab Emirates')).toBeVisible();
+  await expect(page.locator('#main').getByRole('link',{name:'+971 564090857'})).toHaveAttribute('href','tel:+971564090857');
   await expect(page.locator('#main').getByRole('link',{name:'info@tcstech.me'})).toHaveAttribute('href','mailto:info@tcstech.me');
   await expect(page.getByLabel('Name')).toHaveAttribute('required','');
   await expect(page.getByLabel('Email')).toHaveAttribute('required','');
   await expect(page.locator('.enquiry-form').getByLabel('Message')).toHaveAttribute('required','');
   await expect(page.getByLabel('Mobile no (optional)')).not.toHaveAttribute('required','');
-  await page.getByRole('button',{name:'Send'}).click();
+  await page.getByRole('button',{name:'Send on WhatsApp'}).click();
   await expect(page.getByRole('status')).toHaveCount(0);
   await page.getByLabel('Name').fill('Test Visitor');
   await page.getByLabel('Email').fill('visitor@example.com');
   await page.locator('.enquiry-form').getByLabel('Message').fill('Please discuss an energy audit.');
-  await page.getByRole('button',{name:'Send'}).click();
-  await expect(page.getByRole('status')).toContainText('Your email draft is ready');
-  await expect(page.getByRole('link',{name:'Open email draft'})).toHaveAttribute('href',/mailto:info@tcstech.me.*energy%20audit/);
+  await page.getByRole('button',{name:'Send on WhatsApp'}).click();
+  await expect(page.getByRole('status')).toContainText('Your WhatsApp message is ready');
+  const whatsappLink = page.getByRole('link',{name:'Open WhatsApp'});
+  await expect(whatsappLink).toHaveAttribute('href',/^https:\/\/wa\.me\/971564090854\?text=/);
+  const whatsappMessage = new URL(await whatsappLink.getAttribute('href')!).searchParams.get('text') || '';
+  expect(whatsappMessage).toContain('Name: Test Visitor');
+  expect(whatsappMessage).toContain('Email: visitor@example.com');
+  expect(whatsappMessage).toContain('Please discuss an energy audit.');
   await expect(page.locator('#main').getByRole('link',{name:'+971 569694333'})).toHaveAttribute('href','tel:+971569694333');
 });
 test('standards supplied for selected services are visible on their detail pages',async({page})=>{

@@ -1,0 +1,216 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "permanent": true,
+      "source": "/electrical-3rd-party-cold",
+      "destination": "/electrical-third-party-cold-live-testing-services/"
+    },
+    {
+      "permanent": true,
+      "source": "/electrical-3rd-party-cold/",
+      "destination": "/electrical-third-party-cold-live-testing-services/"
+    },
+    {
+      "permanent": true,
+      "source": "/duct-leak-test",
+      "destination": "/duct-leakage-testing-services/"
+    },
+    {
+      "permanent": true,
+      "source": "/duct-leak-test/",
+      "destination": "/duct-leakage-testing-services/"
+    },
+    {
+      "permanent": true,
+      "source": "/dalt-leak-test",
+      "destination": "/duct-leakage-testing-services/"
+    },
+    {
+      "permanent": true,
+      "source": "/dalt-leak-test/",
+      "destination": "/duct-leakage-testing-services/"
+    },
+    {
+      "permanent": true,
+      "source": "/duck-leak-test",
+      "destination": "/duct-leakage-testing-services/"
+    },
+    {
+      "permanent": true,
+      "source": "/duck-leak-test/",
+      "destination": "/duct-leakage-testing-services/"
+    },
+    {
+      "permanent": true,
+      "source": "/u-value-testing",
+      "destination": "/u-value-testing-services/"
+    },
+    {
+      "permanent": true,
+      "source": "/u-value-testing/",
+      "destination": "/u-value-testing-services/"
+    },
+    {
+      "permanent": true,
+      "source": "/indoor-air-quality-testing",
+      "destination": "/indoor-air-quality-testing-service/"
+    },
+    {
+      "permanent": true,
+      "source": "/indoor-air-quality-testing/",
+      "destination": "/indoor-air-quality-testing-service/"
+    },
+    {
+      "permanent": true,
+      "source": "/job-openings",
+      "destination": "/career/"
+    },
+    {
+      "permanent": true,
+      "source": "/job-openings/",
+      "destination": "/career/"
+    },
+    {
+      "permanent": true,
+      "source": "/jobs",
+      "destination": "/career/"
+    },
+    {
+      "permanent": true,
+      "source": "/jobs/",
+      "destination": "/career/"
+    },
+    {
+      "permanent": true,
+      "source": "/jobs/813",
+      "destination": "/career/"
+    },
+    {
+      "permanent": true,
+      "source": "/jobs/813/",
+      "destination": "/career/"
+    },
+    {
+      "permanent": true,
+      "source": "/solar-spark",
+      "destination": "/"
+    },
+    {
+      "permanent": true,
+      "source": "/solar-spark/",
+      "destination": "/"
+    },
+    {
+      "permanent": true,
+      "source": "/project-details",
+      "destination": "/projects/"
+    },
+    {
+      "permanent": true,
+      "source": "/project-details/",
+      "destination": "/projects/"
+    },
+    {
+      "permanent": true,
+      "source": "/water-penetration-test",
+      "destination": "/services/"
+    },
+    {
+      "permanent": true,
+      "source": "/water-penetration-test/",
+      "destination": "/services/"
+    },
+    {
+      "permanent": true,
+      "source": "/energy-optimization-through-energy-audit",
+      "destination": "/services/"
+    },
+    {
+      "permanent": true,
+      "source": "/energy-optimization-through-energy-audit/",
+      "destination": "/services/"
+    },
+    {
+      "permanent": true,
+      "source": "/facility-management",
+      "destination": "/services/"
+    },
+    {
+      "permanent": true,
+      "source": "/facility-management/",
+      "destination": "/services/"
+    },
+    {
+      "permanent": true,
+      "source": "/testing-commissioning-of-mep-system",
+      "destination": "/services/"
+    },
+    {
+      "permanent": true,
+      "source": "/testing-commissioning-of-mep-system/",
+      "destination": "/services/"
+    },
+    {
+      "permanent": true,
+      "source": "/air-permeability-test-for-windows",
+      "destination": "/services/"
+    },
+    {
+      "permanent": true,
+      "source": "/air-permeability-test-for-windows/",
+      "destination": "/services/"
+    },
+    {
+      "permanent": true,
+      "source": "/completed",
+      "destination": "/projects/"
+    },
+    {
+      "permanent": true,
+      "source": "/completed/",
+      "destination": "/projects/"
+    },
+    {
+      "permanent": true,
+      "source": "/on-going",
+      "destination": "/projects/"
+    },
+    {
+      "permanent": true,
+      "source": "/on-going/",
+      "destination": "/projects/"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ]
+}

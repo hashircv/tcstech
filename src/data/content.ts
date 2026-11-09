@@ -80,53 +80,19 @@ export const services: Service[] = [
     ],
   },
 ];
-export const projects = [
-  {
-    name: "W Hotel, Yas Island",
-    location: "Abu Dhabi, UAE",
-    work: "Fresh air handling unit rebalancing & duct leakage",
-    type: "Hospitality",
-  },
-  {
-    name: "Jumeirah Emirates Towers",
-    location: "Dubai, UAE",
-    work: "HVAC system validation",
-    type: "Commercial",
-  },
-  {
-    name: "BEEAH Headquarters",
-    location: "Sharjah, UAE",
-    work: "Seasonal testing & commissioning",
-    type: "Commercial",
-  },
-  {
-    name: "Madinat Jumeirah Resort",
-    location: "Dubai, UAE",
-    work: "HVAC system validation",
-    type: "Hospitality",
-  },
-  {
-    name: "Dubai Holding HQ",
-    location: "Dubai, UAE",
-    work: "MEP testing & commissioning for office refurbishment",
-    type: "Commercial",
-  },
-  {
-    name: "Marina Apartments",
-    location: "UAE",
-    work: "MEP system validation",
-    type: "Residential",
-  },
-];
 export const contact = {
   email: "info@tcstech.me",
   phone: "+971 564090854",
   phoneLink: "+971564090854",
   secondaryPhone: "+971 569694333",
   secondaryPhoneLink: "+971569694333",
-  whatsappNumber: "971555289611",
+  whatsappNumber: "971564090854",
   address:
     "Hamad Ahmad Bin Suqat, Al Qusais Industrial First, Plot No. 44-0, Warehouse No. 17w, Dubai, UAE",
+  abuDhabiPhone: "+971 564090857",
+  abuDhabiPhoneLink: "+971564090857",
+  abuDhabiAddress:
+    "Office 13, Plot No. 50, Sector M26, Ad Diman 6 Street, Musaffah, Abu Dhabi 20313, United Arab Emirates",
 };
 
 export function whatsappLink(

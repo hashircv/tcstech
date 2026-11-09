@@ -7,10 +7,11 @@ The website uses React components and local content files. Updates require editi
 | Home sections, service filters and selected projects | `src/pages/HomePage.tsx` |
 | Fixed header and mobile menu | `src/components/SiteLayout.tsx` |
 | Footer, floating WhatsApp button and footer styles | `src/components/Footer.tsx`, `footer.css` |
-| Shared brand logo | `src/components/Brand.tsx`, `public/tcs-logo.png` |
+| Shared brand logo | `src/components/Brand.tsx`, `public/tcs-logo.webp`; full-resolution reference: `public/tcs-logo-original.webp` |
 | Mobile-only Home menu link visibility | `src/components/navigation.css` |
-| Phone numbers, email, address and WhatsApp number | `src/data/content.ts` — shared contact settings |
-| Home service groups and selected project summaries | `src/data/content.ts` |
+| Office addresses, phone numbers, email and WhatsApp number | `src/data/content.ts` — shared contact settings |
+| Home service groups | `src/data/content.ts` |
+| Ordered projects, scopes, clients, locations and images | `src/data/projects.json` |
 | Hero images, third-slide video, timing and playback | `src/components/HeroBanner.tsx` |
 | Hero layout, transitions and mobile media framing | `src/components/hero-banner.css` |
 | Shared motion timing, easing, touch feedback and reduced-motion support | `src/motion.css` |
@@ -21,14 +22,13 @@ The website uses React components and local content files. Updates require editi
 | Complete service details and reference page content | `src/data/site-content.json` |
 | Six category images and 15 individual service images | `src/data/visuals.ts` |
 | Service and project responsive image rendering | `src/components/ServicePhoto.tsx`, `ProjectPhoto.tsx` |
-| Completed and ongoing project images | `src/data/project-media.json` |
+| Project photo/illustration provenance and prompt set | `docs/project-content.md`, `docs/project-image-prompts.json` |
 | Route selection, page loading and document metadata | `src/pages/PageRouter.tsx` |
 | Persistent header/footer and home/inner-page shell | `src/App.tsx` |
 | Internal navigation, browser history and scroll reset | `src/hooks/usePageNavigation.ts` |
 | Service directory and detail layouts | `src/pages/ServicesPage.tsx`, `ServiceDetailPage.tsx` |
-| Project overview, completed and ongoing pages | `src/pages/ProjectsPage.tsx`, `CompletedProjectsPage.tsx`, `OngoingProjectsPage.tsx` |
+| Unified Projects page | `src/pages/ProjectsPage.tsx`, `src/components/ProjectPortfolio.tsx`, `project-portfolio.css` |
 | Certifications page and certificate preview cards | `src/pages/CertificationPage.tsx`, `public/certifications/` |
-| Shared project portfolio layout | `src/components/ProjectPortfolio.tsx` |
 | About, team and careers pages | `src/pages/AboutPage.tsx`, `TeamPage.tsx`, `CareerPage.tsx` |
 | Markets, news and missing-page layouts | `src/pages/MarketsPage.tsx`, `NewsPage.tsx`, `NotFoundPage.tsx` |
 | Team biographies | `src/data/team.ts` |
@@ -36,19 +36,22 @@ The website uses React components and local content files. Updates require editi
 | Contact page | `src/pages/ContactPage.tsx` |
 | Reusable inner-page heading and breadcrumbs | `src/components/PageHero.tsx` |
 | Shared technical articles, contents navigation and FAQs | `src/components/ContentArticle.tsx` |
-| Contact/career fields, validation and email drafts | `src/components/EnquiryForm.tsx` |
+| Contact WhatsApp form and career email draft | `src/components/EnquiryForm.tsx` |
 | Global theme and responsive styles | `src/styles.css` |
 | Shared card corner radius | `src/cards.css` |
 | Inner-page styles | `src/pages/pages.css` |
 | Canonical domain, route output, sitemap and redirects | `scripts/build-routes.mjs` |
 | Page SEO titles and descriptions | `src/data/seo.json`, `src/data/seo.ts`, `index.html` |
-| Hosting and cache settings | `netlify.toml` |
+| Static route pages, sitemap, robots and host-portable redirect list | `scripts/build-routes.mjs` |
+| Vercel build/output, trailing slash, legacy redirects, immutable asset cache and baseline security headers | `vercel.json` |
 
 ## Safe content updates
 
+All page images use WebP, including certificate thumbnails, the Dubai skyline, logos and editorial/project photography. Use descriptive filenames and responsive variants where needed. Preserve readable certificate text and logo transparency when encoding. The two small PNG browser/Apple touch icons are compatibility exceptions; keep their existing links. `public/tcs-logo-original.webp` is a lossless full-resolution copy of the supplied logo for future branded imagery. Certificate PDFs remain the original documents.
+
 For a new service, add a matching slug and category in both the catalogue and complete content, then assign its photo in `visuals.ts`. Save the full WebP and its `-640.webp` variant in `public/images/editorial/`. Slugs are public URLs: preserve old ones or add an alias in `site-content.json`. The build derives service routes from that content.
 
-For a new project, add its heading/scope to the appropriate completed or ongoing content page, then add a matching title/status and full/mobile image paths to `project-media.json`. Keep the original PDFs updated separately. The portfolio overview counts and homepage selections currently require manual updates.
+For a new project, add one record to `src/data/projects.json` in the desired display order. Supply a stable ID, name, scope, client, location (or an empty string), WebP image/mobile paths, descriptive alt text and `imageKind` (`project`, `rendering` or `illustration`). The main portfolio and first six homepage selections use this same ordered array. Keep generated architectural images labelled as illustrations and official developer renders labelled as renderings. See `project-content.md` for the spreadsheet import and image source notes.
 
 Run `npm run validate:content`, `npm run build`, and `npm run test:e2e`. Playwright starts the Vite server on port 5174 automatically, so no separate terminal setup is needed. Content validation catches mismatched service URLs, empty service details, missing project assignments, missing project assets, videos and PDFs. Browser tests verify service routes, images, layouts and interactive features. The browser suite uses Microsoft Edge; change the channel in `playwright.config.ts` if your development machine uses a different installed browser.
 
@@ -58,12 +61,12 @@ Homepage loading: keep `site-content.json` behind the inner-page router. Shared 
 
 The 2026-10-26 production check at a 390px viewport reduced initial homepage JavaScript from 381,855 to 279,357 bytes (26.8%). The sum of individual gzip sizes fell from 116,587 to 88,218 bytes (24.3%); actual transfer depends on hosting compression. These are local payload measurements, not a new PageSpeed score. Deploy the new build and rerun the same mobile/desktop PageSpeed report to compare LCP, blocking time and the performance score. `tests/homepage-loading.spec.ts` guards deferred content, dialog loading and carousel media.
 
-The shared mobile PageSpeed report (`klt5jrnbgo`, 2026-10-26) recorded performance 77, LCP 4.1s, CLS 0.198 and TBT 0ms. It identified the footer as the layout-shift victim, oversized carousel images, and the PNG logo without dimensions. Loading placeholders now reserve at least one viewport so the footer is not displayed then displaced by the lazy page. `Brand.tsx` uses a 430×177 WebP with explicit dimensions (30,674 bytes); the original PNG remains the authoring/structured-data reference. The carousel and first-image preload share 640/960/1536px candidates so a 412px phone at DPR 1.75 can select the 118,206-byte architecture image rather than the former 351,868-byte full image. Keep both srcset declarations in sync when replacing hero media. Layout and high-density image selection have browser regression coverage.
+The shared mobile PageSpeed report (`klt5jrnbgo`, 2026-10-26) recorded performance 77, LCP 4.1s, CLS 0.198 and TBT 0ms. It identified the footer as the layout-shift victim, oversized carousel images, and the PNG logo without dimensions. Loading placeholders now reserve at least one viewport so the footer is not displayed then displaced by the lazy page. `Brand.tsx` uses a 430×177 WebP with explicit dimensions (30,674 bytes); a lossless WebP preserves the full-resolution authoring reference and structured data uses the UI WebP. The carousel and first-image preload share 640/960/1536px candidates so a 412px phone at DPR 1.75 can select the 118,206-byte architecture image rather than the former 351,868-byte full image. Keep both srcset declarations in sync when replacing hero media. Layout and high-density image selection have browser regression coverage.
 
-- Contact and careers forms prepare email drafts; they do not deliver messages or store applications. Add a server endpoint or a form provider for direct submissions. Keep API credentials on the server.
+- The contact form opens WhatsApp with a prefilled enquiry; the visitor sends it from WhatsApp. The careers form prepares an email draft for CV attachment. Neither form stores submissions. Add a server endpoint or form provider only if direct website submissions are needed, and keep API credentials on the server.
 - The news page is a placeholder for genuine company updates; the reference site's spam/default posts were excluded.
 - Team biographies came from historical published content and should be confirmed before launch.
-- Every page layout has its own file and inner pages load on demand. The 15 active service URLs use one detail template with distinct service data; completed/ongoing portfolios use a shared portfolio component. Five retired service URLs redirect to the services directory. Update shared components to apply a consistent layout across those pages.
+- Every page layout has its own file and inner pages load on demand. The 15 active service URLs use one detail template with distinct service data; the unified Projects page uses a shared portfolio component. Old category paths resolve to Projects. Five retired service URLs redirect to the services directory. Update shared components to apply a consistent layout across those pages.
 - Service directory summaries and full descriptions are intentionally separate copy. Update both when a service changes; URL consistency is checked automatically.
 - CSS is mostly custom, with Tailwind available. Further design work should reuse existing components and tokens rather than introducing another styling system.
 - Route HTML provides metadata, while page content renders in React. Consider prerendering if search visibility becomes a priority.
@@ -74,4 +77,4 @@ The site keeps the established `tcstech.me` domain and the existing service/page
 
 After deployment, keep using the existing Google Search Console property for `tcstech.me` and submit `https://tcstech.me/sitemap.xml`. Inspect a few top service URLs and the contact page with URL Inspection. The previous Search Console account and the full WordPress title/description export were not available during this migration, so review the metadata in `src/data/seo.json` against any saved SEO export before launch; exact historic snippets cannot be recovered from the website source alone. Keep redirects for URLs that had external links or search traffic, and add any remaining old path-to-new path mappings to `aliases` in `src/data/site-content.json`.
 
-See `coverage-check.md` and `content-audit.md` for source coverage, and the image provenance documents for the distinction between illustrative service imagery and original project photographs.
+See `coverage-check.md` and `content-audit.md` for source coverage, and the image provenance documents for the distinction between illustrative imagery and actual project photographs.

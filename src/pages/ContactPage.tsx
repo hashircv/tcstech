@@ -1,4 +1,4 @@
-import { ArrowUpRight, MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, MapPin, Mail, MessageCircle } from 'lucide-react';
 import { contact, whatsappLink } from '../data/content';
 import { PageHero } from '../components/PageHero';
 import { EnquiryForm } from '../components/EnquiryForm';
@@ -10,17 +10,23 @@ export function ContactPage() {
     <section className="section-shell directory-section contact-page-grid">
       <div>
         <div className="contact-info-card">
-          <MapPin size={24}/><h2>Visit our office</h2>
+          <MapPin size={24}/><h2>Dubai office</h2>
           <address>{contact.address}</address>
           <a className="text-link" target="_blank" rel="noreferrer"
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contact.address)}`}>
             Open in maps<ArrowUpRight size={16}/>
           </a>
-        </div>
-        <div className="contact-info-card">
-          <Phone size={23}/><h2>Call our team</h2>
           <a href={`tel:${contact.phoneLink}`}>{contact.phone}</a>
           <a href={`tel:${contact.secondaryPhoneLink}`}>{contact.secondaryPhone}</a>
+        </div>
+        <div className="contact-info-card">
+          <MapPin size={24}/><h2>Abu Dhabi office</h2>
+          <address>{contact.abuDhabiAddress}</address>
+          <a className="text-link" target="_blank" rel="noreferrer"
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contact.abuDhabiAddress)}`}>
+            Open in maps<ArrowUpRight size={16}/>
+          </a>
+          <a href={`tel:${contact.abuDhabiPhoneLink}`}>{contact.abuDhabiPhone}</a>
         </div>
         <div className="contact-info-card">
           <Mail size={23}/><h2>Email us</h2>

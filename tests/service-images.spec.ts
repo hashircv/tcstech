@@ -30,7 +30,7 @@ test('all 15 services have distinct responsive images and WhatsApp enquiries are
     const whatsapp=page.getByRole('link',{name:'Message TCS on WhatsApp'});
     await expect(whatsapp).toBeVisible();
     const url=new URL((await whatsapp.getAttribute('href'))!);
-    expect(url.pathname).toBe('/971555289611');
+    expect(url.pathname).toBe('/971564090854');
     expect(url.searchParams.get('text')).toContain('Hello TCS');
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   }

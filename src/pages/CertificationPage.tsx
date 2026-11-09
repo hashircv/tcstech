@@ -10,21 +10,21 @@ const certificates = [
     standard: 'ISO 9001:2015',
     name: 'Quality management system',
     number: 'AB80VII62026659',
-    image: '/certifications/iso-9001-preview-1.jpg',
+    image: '/certifications/iso-9001-preview-1.webp',
     pdf: '/certifications/tcs-iso-9001-2015.pdf',
   },
   {
     standard: 'ISO 14001:2015',
     name: 'Environmental management system',
     number: 'CD80VII62026660',
-    image: '/certifications/iso-14001-preview-1.jpg',
+    image: '/certifications/iso-14001-preview-1.webp',
     pdf: '/certifications/tcs-iso-14001-2015.pdf',
   },
   {
     standard: 'ISO 45001:2018',
     name: 'Occupational health and safety management system',
     number: 'EF80VII62026661',
-    image: '/certifications/iso-45001-preview-1.jpg',
+    image: '/certifications/iso-45001-preview-1.webp',
     pdf: '/certifications/tcs-iso-45001-2018.pdf',
   },
 ];
@@ -56,7 +56,7 @@ export function CertificationPage() {
         {certificates.map((certificate) => (
           <article className="certification-card" key={certificate.standard}>
             <div className="certificate-preview">
-              <img src={certificate.image} alt={`Full certificate preview: ${certificate.standard} for TCS Building Energy Efficiency Services`} loading="lazy" />
+              <img src={certificate.image} alt={`Full certificate preview: ${certificate.standard} for TCS Building Energy Efficiency Services`} loading="lazy" width="708" height="1000" />
             </div>
             <div className="certificate-content">
               <p className="eyebrow"><BadgeCheck size={14}/> {certificate.standard}</p>

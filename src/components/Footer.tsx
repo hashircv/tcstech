@@ -25,17 +25,24 @@ export function Footer() {
           <nav className="footer-links" aria-label="Services and projects">
             <h2 className="footer-label">Our work</h2>
             <a href="/services/">All services</a>
-            <a href="/completed/">Completed projects</a>
-            <a href="/on-going/">Ongoing projects</a>
+            <a href="/projects/">Projects</a>
             <a href="/contact/">Contact us</a>
           </nav>
           <div className="footer-contact">
             <h2 className="footer-label">Get in touch</h2>
             <a className="footer-contact-link" href={`mailto:${contact.email}`}><Mail size={17}/>{contact.email}</a>
-            <a className="footer-contact-link" href={`tel:${contact.phoneLink}`}><Phone size={17}/>{contact.phone}</a>
-            <a className="footer-contact-link" href={`tel:${contact.secondaryPhoneLink}`}><Phone size={17}/>{contact.secondaryPhone}</a>
             <a className="footer-contact-link" href={whatsappLink()} target="_blank" rel="noreferrer"><MessageCircle size={18}/>WhatsApp us</a>
-            <div className="footer-address"><MapPin size={19}/><address>{contact.address}</address></div>
+            <div className="footer-office">
+              <h3>Dubai office</h3>
+              <a className="footer-contact-link" href={`tel:${contact.phoneLink}`}><Phone size={17}/>{contact.phone}</a>
+              <a className="footer-contact-link" href={`tel:${contact.secondaryPhoneLink}`}><Phone size={17}/>{contact.secondaryPhone}</a>
+              <div className="footer-address"><MapPin size={19}/><address>{contact.address}</address></div>
+            </div>
+            <div className="footer-office">
+              <h3>Abu Dhabi office</h3>
+              <a className="footer-contact-link" href={`tel:${contact.abuDhabiPhoneLink}`}><Phone size={17}/>{contact.abuDhabiPhone}</a>
+              <div className="footer-address"><MapPin size={19}/><address>{contact.abuDhabiAddress}</address></div>
+            </div>
           </div>
         </div>
         <div className="footer-bottom">

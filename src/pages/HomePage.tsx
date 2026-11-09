@@ -11,7 +11,8 @@ import {
   Wind,
 } from "lucide-react";
 import { Reveal } from "../components/Reveal";
-import { contact, projects, services } from "../data/content";
+import { contact, services } from "../data/content";
+import { projects } from "../data/projects";
 import type { Service } from "../data/content";
 import { ProjectPhoto } from "../components/ProjectPhoto";
 import { HeroBanner } from "../components/HeroBanner";
@@ -88,7 +89,7 @@ export default function HomePage() {
               <strong>
                 300<span>+</span>
               </strong>
-              <span>Completed projects</span>
+              <span>Projects supported</span>
             </div>
             <div>
               <strong>2017</strong>
@@ -200,7 +201,9 @@ export default function HomePage() {
         <div className="project-feature">
           <Reveal className="project-photo" variant="image">
             <img
-              src="/images/dubai.jpg"
+              src="/images/dubai.webp"
+              srcSet="/images/dubai-640.webp 640w, /images/dubai.webp 1000w"
+              sizes="(max-width:760px) 88vw, 40vw"
               alt="Dubai skyline, illustrating the region we serve"
               loading="lazy"
               width="1000"
@@ -212,19 +215,19 @@ export default function HomePage() {
           </Reveal>
           <div className="project-list">
             {projects
-              .slice(0, allProjects ? projects.length : 3)
+              .slice(0, allProjects ? 6 : 3)
               .map((project, i) => (
-                <Reveal key={project.name} delay={(i % 3) * 65}>
+                <Reveal key={project.id} delay={(i % 3) * 65}>
                   <article className="project-item">
-                    <ProjectPhoto title={project.name} compact />
+                    <ProjectPhoto project={project} compact />
                     <div className="project-item-copy">
                       <div className="project-index">
                         0{i + 1}
-                        <span>{project.type}</span>
+                        <span>TCS PROJECT</span>
                       </div>
                       <h3>{project.name}</h3>
-                      <p>{project.work}</p>
-                      <div className="project-location">{project.location}</div>
+                      <p>{project.scope}</p>
+                      {project.location && <div className="project-location">{project.location}</div>}
                     </div>
                   </article>
                 </Reveal>
@@ -233,7 +236,7 @@ export default function HomePage() {
         </div>
         <div className="all-services-link">
           <a className="text-link" href="/projects/">
-            View completed and ongoing project portfolios{" "}
+            View all projects{" "}
             <ArrowUpRight size={18} />
           </a>
         </div>
@@ -352,7 +355,7 @@ export default function HomePage() {
               <Phone size={16} />
               {contact.phone}
             </a>
-            <span>Dubai, United Arab Emirates</span>
+            <span>Dubai & Abu Dhabi, United Arab Emirates</span>
           </div>
         </div>
       </section>

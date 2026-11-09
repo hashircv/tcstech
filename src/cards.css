@@ -15,3 +15,6 @@ dialog.service-dialog,
 @media (max-width: 760px) {
   .article-layout .contents-panel { border-radius: var(--radius-card); }
 }
+.portfolio-photo, .project-thumbnail { position: relative; }
+.project-image-label { position: absolute; left: 12px; bottom: 12px; padding: 6px 9px; border-radius: 6px; background: #243329e8; color: #fff; font-size: 10px; line-height: 1.3; pointer-events: none; }
+.project-thumbnail .project-image-label { left: 5px; bottom: 5px; padding: 4px 5px; font-size: 8px; }

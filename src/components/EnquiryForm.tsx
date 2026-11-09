@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { Mail } from "lucide-react";
-import { contact } from "../data/content";
+import { Mail, MessageCircle } from "lucide-react";
+import { contact, whatsappLink } from "../data/content";
 
 const roles = [
   "Fresher",
@@ -29,6 +29,19 @@ export function EnquiryForm({ career = false }: { career?: boolean }) {
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    if (!career) {
+      const message = [
+        "Hello TCS, I would like to discuss my project.",
+        `Name: ${data.get("Name")}`,
+        `Email: ${data.get("Email")}`,
+        data.get("Phone") ? `Mobile: ${data.get("Phone")}` : "",
+        `Message: ${data.get("Message")}`,
+      ].filter(Boolean).join("\n");
+      const link = whatsappLink(message);
+      setDraft(link);
+      window.open(link, "_blank", "noopener,noreferrer");
+      return;
+    }
     const body =
       [...data.entries()]
         .map(([key, value]) => `${key}: ${value}`)
@@ -50,7 +63,7 @@ export function EnquiryForm({ career = false }: { career?: boolean }) {
       <p className="form-intro">
         {career
           ? "Prepare your application details below, then attach your CV in your email app."
-          : "Complete the details below to prepare an email to our team."}
+          : "Complete the details below. WhatsApp will open with your message ready to send."}
       </p>
       <div className="form-grid">
         <label>
@@ -191,24 +204,24 @@ export function EnquiryForm({ career = false }: { career?: boolean }) {
         </>
       )}
       <button className="button button-dark" type="submit">
-        <Mail size={17} />
-        {career ? "Prepare email" : "Send"}
+        {career ? <Mail size={17} /> : <MessageCircle size={17} />}
+        {career ? "Prepare email" : "Send on WhatsApp"}
       </button>
       <p className="form-note">
         {career
           ? "Nothing is submitted or stored by this form. You review and send the message in your email app."
-          : "Send prepares an email draft for you to review. This form does not store submissions."}
+          : "WhatsApp opens with your details filled in. Review the message and tap Send in WhatsApp. This form does not store submissions."}
       </p>
       {draft && (
         <div className="draft-ready" role="status">
-          <strong>Your email draft is ready.</strong>
+          <strong>{career ? "Your email draft is ready." : "Your WhatsApp message is ready."}</strong>
           <p>
             {career
               ? "Open the draft, attach your CV, and send it to complete your application."
-              : "Open the draft and send it to contact TCS."}
+              : "If WhatsApp did not open, use this link to continue."}
           </p>
-          <a className="button button-dark" href={draft}>
-            Open email draft
+          <a className="button button-dark" href={draft} target={career ? undefined : "_blank"} rel={career ? undefined : "noreferrer"}>
+            {career ? "Open email draft" : "Open WhatsApp"}
           </a>
         </div>
       )}

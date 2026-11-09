@@ -2334,166 +2334,6 @@
   ],
   "pages": [
     {
-      "id": 1063,
-      "slug": "completed",
-      "title": "Completed",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Our success stories"
-        },
-        {
-          "type": "p",
-          "text": "Over the years, we’ve successfully completed more than 100 of projects, each reflecting our commitment to quality and innovation. Below are a few of our latest accomplishments,"
-        },
-        {
-          "type": "link",
-          "text": "View project list",
-          "href": "/documents/completed-project-list.pdf"
-        },
-        {
-          "type": "heading",
-          "text": "W Hotel Yas Island, Abu Dhabi, UAE (Rebalancing of fresh air handling units duct leakage)"
-        },
-        {
-          "type": "heading",
-          "text": "Al Rostamani ( Tab work of the HVAC system and Electrical Testing)"
-        },
-        {
-          "type": "heading",
-          "text": "Marina Apartments (Validation of MEP system)"
-        },
-        {
-          "type": "heading",
-          "text": "Jumeirah Emirates Towers (Validation of the HVAC system )"
-        },
-        {
-          "type": "heading",
-          "text": "Spinneys Hypermarket (Tab work of HVAC system)"
-        },
-        {
-          "type": "heading",
-          "text": "Madinat Jumeirah Resort (Validation of HVAC system)"
-        },
-        {
-          "type": "heading",
-          "text": "City Bank @DIFC (Validation, Air & Water Balancing of HVAC system)"
-        },
-        {
-          "type": "heading",
-          "text": "Giordano, Dom, Dubai, UAE (Tab Work and Validation of HVAC System)"
-        },
-        {
-          "type": "heading",
-          "text": "Marina Yas Island, Abu Dhabi ( Tab work of HVAC system )"
-        },
-        {
-          "type": "heading",
-          "text": "Jumeirah Beach Enhancement (TAB Work)"
-        },
-        {
-          "type": "heading",
-          "text": "BEEAH Headquarter, Sharjah (Seasonal Testing & Commissioning)"
-        },
-        {
-          "type": "heading",
-          "text": "Verda Beach Project ( TAB Work)"
-        },
-        {
-          "type": "heading",
-          "text": "Dubai Holding HQ Office Refurbishment (MEP Testing & Commissioning)"
-        },
-        {
-          "type": "heading",
-          "text": "Grandiose supermarket, Yas Bay (Tab work of HVAC system )"
-        },
-        {
-          "type": "heading",
-          "text": "ENBD, Electra Branch (DB Cold & Live test)"
-        }
-      ],
-      "links": [
-        {
-          "text": "View project list",
-          "href": "/documents/completed-project-list.pdf"
-        }
-      ]
-    },
-    {
-      "id": 1062,
-      "slug": "on-going",
-      "title": "On-going",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "What We're Working On Right Now"
-        },
-        {
-          "type": "link",
-          "text": "View On-Going project list",
-          "href": "/documents/ongoing-project-list.pdf"
-        },
-        {
-          "type": "heading",
-          "text": "Job name Petalz, Danube Properties"
-        },
-        {
-          "type": "heading",
-          "text": "Al Badia Festival City Dubai"
-        },
-        {
-          "type": "heading",
-          "text": "MAF Tower 1 , scope TAB and Duct assessment and cleaning"
-        },
-        {
-          "type": "heading",
-          "text": "City Tower , scope Thermography"
-        },
-        {
-          "type": "heading",
-          "text": "Sensoria Five Luxe- Jumeirah"
-        },
-        {
-          "type": "heading",
-          "text": "Jumeriah Beach House Restaurant (2 Area), Burj AL Arab Jumeirah"
-        },
-        {
-          "type": "heading",
-          "text": "Dragon Mart, International City"
-        },
-        {
-          "type": "heading",
-          "text": "Dubai Development Authority (DDA) Dubai"
-        },
-        {
-          "type": "heading",
-          "text": "AW Rostamani Head Office (3) Dubai"
-        },
-        {
-          "type": "heading",
-          "text": "Technology Innovation Institute (TII), Abu Dhabi"
-        },
-        {
-          "type": "heading",
-          "text": "ICD Brookfield Towers, Dubai"
-        },
-        {
-          "type": "heading",
-          "text": "W Residencies. Palm Jumeira"
-        },
-        {
-          "type": "heading",
-          "text": "Ministry of Finance (MOF), Abu Dhabi"
-        }
-      ],
-      "links": [
-        {
-          "text": "View On-Going project list",
-          "href": "/documents/ongoing-project-list.pdf"
-        }
-      ]
-    },
-    {
       "id": 811,
       "slug": "job-openings",
       "title": "Jobs",
@@ -2626,22 +2466,6 @@
         {
           "type": "item",
           "text": "info@tcstech.me"
-        }
-      ],
-      "links": []
-    },
-    {
-      "id": 43,
-      "slug": "projects",
-      "title": "Projects",
-      "blocks": [
-        {
-          "type": "heading",
-          "text": "Innovative thinking for better engineering solutions"
-        },
-        {
-          "type": "p",
-          "text": "Our expertise ensures efficient, reliable, and sustainable systems that enhance the performance of any building."
         }
       ],
       "links": []
@@ -2892,6 +2716,8 @@
     "energy-optimization-through-energy-audit": "services",
     "facility-management": "services",
     "testing-commissioning-of-mep-system": "services",
-    "air-permeability-test-for-windows": "services"
+    "air-permeability-test-for-windows": "services",
+    "completed": "projects",
+    "on-going": "projects"
   }
 }

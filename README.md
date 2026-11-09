@@ -1,6 +1,6 @@
 # TCS Building Energy Efficiency Services
 
-Responsive React, TypeScript, Vite and Tailwind CSS website with 15 active service detail pages, a certifications page, 15 completed projects, 13 ongoing projects and the original downloadable project lists.
+Responsive React, TypeScript, Vite and Tailwind CSS website with 15 active service detail pages, a certifications page, one ordered 32-project portfolio with scope, client and location details.
 
 ## Local development
 
@@ -18,29 +18,28 @@ npm run build
 npm run preview
 ```
 
-The build produces `dist/`, including 42 route entry points, canonical metadata, a sitemap, robots.txt and legacy redirects. All final images, videos, certificates and project PDFs are local assets and are included automatically. Raw WordPress downloads, original authoring media and one-time migration tools are excluded from this repository.
+The build produces `dist/` with static route pages, canonical metadata, a sitemap, robots.txt and legacy redirects. All final images, videos and certificates are local assets and are included automatically. Raw WordPress downloads, original authoring media and one-time migration tools are excluded from this repository.
 
-To deploy from GitHub on Netlify:
+To deploy from GitHub on Vercel:
 
 1. Push this project to your GitHub repository.
-2. Import that repository into Netlify and select the production branch.
-3. Use the included `netlify.toml`: build command `npm run build`, publish directory `dist`, Node.js 22.
-4. Connect your domain in the hosting dashboard once you have reviewed the deployment.
+2. Import that repository into Vercel and select the production branch.
+3. `vercel.json` configures the `npm run build` command, `dist` output, trailing slashes, legacy redirects, immutable asset caching and baseline security headers.
+4. Connect your domain in the Vercel dashboard after reviewing the deployment.
 
-See the official [Vite deployment guide](https://docs.netlify.com/build/frameworks/framework-setup-guides/vite/) and [Netlify configuration reference](https://docs.netlify.com/build/configure-builds/file-based-configuration/).
+See the official [Vercel Vite guide](https://vercel.com/docs/frameworks/frontend/vite) and [Vercel project configuration reference](https://vercel.com/docs/project-configuration/vercel-json).
 
 On another static host, publish `dist/` and configure the equivalent legacy redirects and SPA fallback. Canonical URLs and sitemap entries currently use `https://tcstech.me`; update `scripts/build-routes.mjs` if the final production domain differs. A GitHub repository alone does not host this build automatically.
 
-Contact and careers forms validate input and open email drafts. They do not submit to an email backend or upload CVs. WhatsApp opens a prefilled enquiry to the reference site's published WhatsApp number.
+The contact form opens WhatsApp with the visitor's message prefilled. The careers form prepares an email draft so applicants can attach their CV. Neither form stores submissions or uploads files.
 
 ## Project structure
 
 - `src/components/`: shared layout, hero carousel, service/project images, forms and scroll reveals.
-- `src/pages/`: separate home, services, service detail, project overview, completed projects, ongoing projects, about, team, careers, contact, markets, news and 404 page files, plus a small router. Inner pages load on demand.
-- `src/data/`: complete migrated content, service catalogue, contact details and image assignments.
-- `public/images/`: final responsive images. Each active service has a distinct illustrative photograph; project photos are matched original reference-site images.
+- `src/pages/`: separate home, services, service detail, projects, about, team, careers, contact, markets, news and 404 page files, plus a small router. Inner pages load on demand.
+- `src/data/`: complete service content, service catalogue, contact details and the ordered project data in `projects.json`.
+- `public/images/`: final responsive images. Each active service has a distinct image; the portfolio contains seven project photographs, two official developer renderings and 23 labelled architectural illustrations.
 - `public/videos/`: edited 7.4-second desktop and mobile hero videos, which autoplay muted on slide three.
-- `public/documents/`: original project-list PDFs.
 - `public/certifications/`: ISO certificates and optimized preview images for the certifications page.
 - `scripts/build-routes.mjs`: production entry pages, metadata and redirects.
 - `docs/`: reference-content audit and image provenance.
@@ -56,4 +55,4 @@ npm run test:e2e
 
 Playwright starts the development server on `http://127.0.0.1:5174` automatically. Browser tests use installed Microsoft Edge; change the channel in `playwright.config.ts` if needed. Tests verify all 15 active service deep links, project images, mobile layouts, WhatsApp links and reduced-motion behavior.
 
-See [maintenance.md](docs/maintenance.md) for where to edit every page and feature, [coverage-check.md](docs/coverage-check.md) for the verified source inventory and [service-image-prompts.md](docs/service-image-prompts.md) for generated-image provenance.
+See [maintenance.md](docs/maintenance.md) for where to edit every page and feature, [project-content.md](docs/project-content.md) for project order and image provenance, [coverage-check.md](docs/coverage-check.md) for the service inventory and [service-image-prompts.md](docs/service-image-prompts.md) for generated-image provenance.

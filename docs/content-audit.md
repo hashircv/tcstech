@@ -41,6 +41,10 @@ Rechecked on 1 October 2026 against a fresh live page collection. The source con
 | /about/ | About | Dedicated page / structured source content |
 | / | Solar Spark | Home page retained |
 
+## Project update — 7 November 2026
+
+The project rows above describe the original migration only. The owner subsequently supplied an ordered project spreadsheet. The website now presents its 32 retained entries on one Projects page, with yellow-marked entries removed. `/completed/` and `/on-going/` are legacy aliases of `/projects/`. See [project-content.md](project-content.md) for current content and image provenance.
+
 ## Additional findings
 
 - Footer/content links also reference /u-value-testing/, /indoor-air-quality-testing/ and /duck-leak-test/. These legacy paths resolve to their complete canonical service pages.
@@ -55,5 +59,5 @@ Rechecked on 1 October 2026 against a fresh live page collection. The source con
 - Indoor-air FAQs contained unrelated environmental product-testing paragraphs (radiation, military and electronics environments); those unrelated tails were removed.
 - Older standards and numerical claims from the source are retained as reference content, not independently recertified. Confirm applicable project standards before launch.
 - Completed and ongoing PDF project lists are retained as downloadable original documents. Ongoing status reflects the source list, not independently verified construction status.
-- Contact/application forms prepare an email draft and do not transmit, store data, or silently upload CVs. Application fields mirror the source. CV attachment is done by the applicant in their email app, or via the existing online form.
+- The contact form opens WhatsApp with the entered details prefilled; the visitor reviews and sends the message in WhatsApp. It does not store submissions. Career applications continue to prepare an email draft so the applicant can attach their CV; the site does not store or upload CVs.
 

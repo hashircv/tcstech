@@ -9,6 +9,8 @@
 .site-footer .footer-links > a { min-height: 36px; display: flex; align-items: center; color: #e0e7da; width: fit-content; }
 .site-footer .footer-contact-link { font-size: 14px; line-height: 1.6; min-height: 38px; display: flex; align-items: center; gap: 11px; color: #e0e7da; overflow-wrap: anywhere; }
 .site-footer .footer-contact-link svg, .site-footer .footer-address svg { flex-shrink: 0; color: #a8bf8b; }
+.site-footer .footer-office { margin-top: 20px; }
+.site-footer .footer-office h3 { margin: 0 0 5px; color: #d8e9b0; font-size: 13px; font-weight: 600; }
 .site-footer .footer-address { display: flex; align-items: flex-start; gap: 11px; margin-top: 17px; }
 .site-footer .footer-address svg { margin-top: 3px; }
 .site-footer .footer-address address { font-size: 13px; line-height: 1.85; color: #cbd6c6; max-width: 300px; margin: 0; }

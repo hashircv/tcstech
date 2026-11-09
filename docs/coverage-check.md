@@ -2,9 +2,7 @@
 
 Checked 1 October 2026 against the freshly fetched WordPress page collection at https://tcstech.me/. All 32 source pages match the previous snapshot after ignoring dynamic careers-form IDs and security tokens.
 
-All 15 active services have detail blocks, section navigation and responsive imagery. Five service URLs redirect to the services directory following the owner's latest service changes. All 15 completed and 13 ongoing featured projects have a photo matched to their original reference entry. Published project scope descriptions remain present. Both original project-list PDFs remain available; additional PDF-only entries are available in those documents, rather than being presented as invented photo case studies.
-
-Each active service has its own distinct illustrative generated photograph, selected for its technical subject. All are optimized as 1536px and 640px WebP variants. Project photographs are original reference-site images, not generated pictures of named projects.
+All 15 active services have detail blocks, section navigation and responsive imagery. Five service URLs redirect to the services directory following the owner's service changes. Project content was replaced on 7 November 2026 by the owner's ordered spreadsheet: 32 retained entries, three yellow rows excluded, and one Projects page. See [project-content.md](project-content.md) for the current project source and imagery, and [project-image-prompts.json](project-image-prompts.json) for generated architectural image prompts.
 
 ## Services
 
@@ -26,41 +24,12 @@ Each active service has its own distinct illustrative generated photograph, sele
 | Micro-camera inspections | Preserved reference content | camera-inspection.webp | — |
 | Property Inspection and Snagging | Existing inspection content under the updated service name | property-inspection.webp | — |
 
-All active service images have 1536px and 640px WebP variants. Project photographs are original reference-site images, not generated pictures of named projects.
+All active service images have 1536px and 640px WebP variants.
 
-## Featured projects
+## Projects
 
-| Status | Reference title and published scope | Matched image |
-|---|---|---|
-| Completed | W Hotel Yas Island, Abu Dhabi, UAE (Rebalancing of fresh air handling units duct leakage) | w-hotel-yas-island-abu-dhabi.webp |
-| Completed | Al Rostamani ( Tab work of the HVAC system and Electrical Testing) | al-rostamani-hvac-electrical-testing.webp |
-| Completed | Marina Apartments (Validation of MEP system) | marina-apartments-mep-validation.webp |
-| Completed | Jumeirah Emirates Towers (Validation of the HVAC system ) | jumeirah-emirates-towers-hvac-validation.webp |
-| Completed | Spinneys Hypermarket (Tab work of HVAC system) | spinneys-hypermarket-hvac-balancing.webp |
-| Completed | Madinat Jumeirah Resort (Validation of HVAC system) | madinat-jumeirah-resort-hvac-validation.webp |
-| Completed | City Bank @DIFC (Validation, Air & Water Balancing of HVAC system) | city-bank-difc-hvac-balancing.webp |
-| Completed | Giordano, Dom, Dubai, UAE (Tab Work and Validation of HVAC System) | giordano-dubai-hvac-validation.webp |
-| Completed | Marina Yas Island, Abu Dhabi ( Tab work of HVAC system ) | marina-yas-island-hvac-balancing.webp |
-| Completed | Jumeirah Beach Enhancement (TAB Work) | jumeirah-beach-enhancement-tab.webp |
-| Completed | BEEAH Headquarter, Sharjah (Seasonal Testing & Commissioning) | beeah-headquarters-sharjah-commissioning.webp |
-| Completed | Verda Beach Project ( TAB Work) | verda-beach-project-tab.webp |
-| Completed | Dubai Holding HQ Office Refurbishment (MEP Testing & Commissioning) | dubai-holding-hq-mep-commissioning.webp |
-| Completed | Grandiose supermarket, Yas Bay (Tab work of HVAC system ) | grandiose-yas-bay-hvac-balancing.webp |
-| Completed | ENBD, Electra Branch (DB Cold & Live test) | enbd-electra-branch-electrical-testing.webp |
-| Ongoing | Job name Petalz, Danube Properties | petalz-danube-properties.webp |
-| Ongoing | Al Badia Festival City Dubai | al-badia-festival-city-dubai.webp |
-| Ongoing | MAF Tower 1 , scope TAB and Duct assessment and cleaning | maf-tower-1-duct-assessment.webp |
-| Ongoing | City Tower , scope Thermography | city-tower-thermography.webp |
-| Ongoing | Sensoria Five Luxe- Jumeirah | sensoria-five-luxe-jumeirah.webp |
-| Ongoing | Jumeriah Beach House Restaurant (2 Area), Burj AL Arab Jumeirah | jumeirah-beach-house-restaurant.webp |
-| Ongoing | Dragon Mart, International City | dragon-mart-international-city.webp |
-| Ongoing | Dubai Development Authority (DDA) Dubai | dubai-development-authority.webp |
-| Ongoing | AW Rostamani Head Office (3) Dubai | aw-rostamani-head-office.webp |
-| Ongoing | Technology Innovation Institute (TII), Abu Dhabi | technology-innovation-institute-abu-dhabi.webp |
-| Ongoing | ICD Brookfield Towers, Dubai | icd-brookfield-towers-dubai.webp |
-| Ongoing | W Residencies. Palm Jumeira | w-residences-palm-jumeirah.webp |
-| Ongoing | Ministry of Finance (MOF), Abu Dhabi | ministry-of-finance-abu-dhabi.webp |
+The current inventory is the single ordered array in `src/data/projects.json`. It contains 32 projects with source numbers 1–15, 18–20 and 22–35. Five matching project photographs are retained at their native dimensions; 27 new architectural illustrations have 1000px/640px WebP variants and are explicitly labelled. Every card has a distinct image. Completed/ongoing categories and the obsolete PDF lists have been retired. See [project-content.md](project-content.md).
 
 ## Content cleanup
 
-Source blocks were compared with the imported technical content. Differences are the documented duplicate cleanup, typo repairs, removal of unfinished acoustic case-study instructions, unrelated air-quality FAQ tails and neutralization of pasted third-party company names. No additional service or featured project was missing. See [the migration audit](content-audit.md) for the full exclusion record.
+Source blocks were compared with the imported technical content. Differences are the documented duplicate cleanup, typo repairs, removal of unfinished acoustic case-study instructions, unrelated air-quality FAQ tails and neutralization of pasted third-party company names. No additional service was missing. The project inventory now follows the later owner-supplied spreadsheet. See [the migration audit](content-audit.md) for the full exclusion record.

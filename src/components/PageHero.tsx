@@ -2,11 +2,12 @@ interface PageHeroProps {
   title: string;
   eyebrow: string;
   description?: string;
+  className?: string;
 }
 
-export function PageHero({ title, eyebrow, description }: PageHeroProps) {
+export function PageHero({ title, eyebrow, description, className }: PageHeroProps) {
   return (
-    <section className="page-hero section-shell">
+    <section className={`page-hero section-shell${className ? ` ${className}` : ''}`}>
       <nav className="breadcrumbs" aria-label="Breadcrumb">
         <a href="/">Home</a><span>/</span>
         {eyebrow === 'OUR EXPERTISE' && <><a href="/services/">Services</a><span>/</span></>}

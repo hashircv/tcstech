@@ -17,7 +17,8 @@ export function getPageSEO(slug: string, service?: { title: string; description:
       ?? settings.serviceTitleTemplate.replace('{title}', service.title)
     : staticPage?.title ?? 'Page not found | TCS';
   const description = shortDescription(service
-    ? settings.serviceDescriptionTemplate.replace('{description}', service.description)
+    ? (settings.indexedDescriptionOverrides as Record<string, string>)[slug]
+      ?? settings.serviceDescriptionTemplate.replace('{description}', service.description)
     : staticPage?.description ?? 'Explore TCS building energy engineering and project services across Dubai and the UAE.');
   // PageRouter resolves legacy aliases before requesting metadata. Keeping the
   // full page archive out of this shared helper avoids shipping it on home.

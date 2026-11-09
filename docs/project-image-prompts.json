@@ -1,0 +1,169 @@
+{
+  "tool": "Built-in ImageGen",
+  "type": "Architectural illustrations, not actual project photographs",
+  "basePrompt": "Use case: photorealistic-natural. Asset type: professional engineering company project-card architectural illustration, not a documentary image or official rendering of a named development. Create one high-quality landscape 3:2 architectural photograph-style image. Realistic materials, lighting, straight verticals, believable regional UAE architecture, restrained premium editorial quality. No people, staff, workers, uniforms, text, captions, logos, watermarks, collage or graphic overlays. Keep the main architectural subject centered with enough space for responsive 3:2 crops. Do not reproduce a real project’s official rendering. Scene: ",
+  "images": [
+    {
+      "sourceNumber": 1,
+      "image": "public/images/projects/golf-hillside-dubai-hills.webp",
+      "mobile": "public/images/projects/golf-hillside-dubai-hills-640.webp",
+      "scenePrompt": "Elegant contemporary apartment tower next to a lush golf course in Dubai, stepped balconies, pale stone and glass, golf fairway foreground, wide eye-level view, fresh morning light."
+    },
+    {
+      "sourceNumber": 2,
+      "image": "public/images/projects/azha-villas-ajman.webp",
+      "mobile": "public/images/projects/azha-villas-ajman-640.webp",
+      "scenePrompt": "Contemporary family villa community in Ajman, a calm residential street lined with warm beige two-storey villas, planted front gardens, desert-adapted trees, soft afternoon sunlight, human-scale street perspective."
+    },
+    {
+      "sourceNumber": 3,
+      "image": "public/images/projects/explorers-mirdif-city-centre.webp",
+      "mobile": "public/images/projects/explorers-mirdif-city-centre-640.webp",
+      "scenePrompt": "Premium family discovery and play destination interior inside a modern Dubai shopping mall, sculptural timber play features, playful but refined interior, sophisticated overhead HVAC integration, bright natural skylight, wide interior composition without people."
+    },
+    {
+      "sourceNumber": 5,
+      "image": "public/images/projects/dec-campus-dubai-exhibition-centre.webp",
+      "mobile": "public/images/projects/dec-campus-dubai-exhibition-centre-640.webp",
+      "scenePrompt": "Large contemporary exhibition campus in Dubai, low monumental exhibition halls, long shaded entrance canopy, clean white structural columns and glass entrance, landscaped pedestrian arrival plaza, late-morning daylight, architectural perspective."
+    },
+    {
+      "sourceNumber": 6,
+      "image": "public/images/projects/wynn-hotel-resort-ras-al-khaimah.webp",
+      "mobile": "public/images/projects/wynn-hotel-resort-ras-al-khaimah-640.webp",
+      "scenePrompt": "Luxury island hotel and resort in Ras Al Khaimah, a tall elegant gently curved hotel tower set back from turquoise Gulf water, landscaped pool terraces and white beach, distant low island horizon, natural morning light, aerial oblique perspective. Generic resort concept, do not copy a specific existing building design."
+    },
+    {
+      "sourceNumber": 7,
+      "image": "public/images/projects/byd-auto-village-showroom.webp",
+      "mobile": "public/images/projects/byd-auto-village-showroom-640.webp",
+      "scenePrompt": "Premium electric-car showroom interior in Dubai, a few unbranded modern electric sedans, full-height glazing, polished pale floor, dark bronze ceiling fins and architectural lighting, wide low-angle interior view."
+    },
+    {
+      "sourceNumber": 8,
+      "image": "public/images/projects/kerno-hvac-sharjah.webp",
+      "mobile": "public/images/projects/kerno-hvac-sharjah-640.webp",
+      "scenePrompt": "Contemporary industrial campus in Sharjah, orderly modern factory buildings, elegant grey metal cladding, roof-mounted ventilation equipment behind neat screening, clean service road and restrained planting, soft early-morning light."
+    },
+    {
+      "sourceNumber": 9,
+      "image": "public/images/projects/villa-luvana-emirates-hills.webp",
+      "mobile": "public/images/projects/villa-luvana-emirates-hills-640.webp",
+      "scenePrompt": "Luxurious contemporary villa in Emirates Hills, Dubai, serene ivory stone facade with deep cantilevered shade, broad glazing, mature garden and reflecting pool, twilight exterior, eye-level architectural photo composition."
+    },
+    {
+      "sourceNumber": 10,
+      "image": "public/images/projects/wadi-al-amardi-villas-dubai.webp",
+      "mobile": "public/images/projects/wadi-al-amardi-villas-dubai-640.webp",
+      "scenePrompt": "Distinctive low-rise private villa in Wadi Al Amardi, Dubai, refined modern Arabian residential architecture, warm stone walls, shaded courtyard entrance, elegant perforated screen, palms and discreet landscaping, golden morning light."
+    },
+    {
+      "sourceNumber": 11,
+      "image": "public/images/projects/khazan-dxb3-data-centre.webp",
+      "mobile": "public/images/projects/khazan-dxb3-data-centre-640.webp",
+      "scenePrompt": "State-of-the-art Dubai data centre exterior, secure anonymous grey and white technical building, vertical shading fins, service yard with cooling equipment screened in the background, neat landscaping, architectural street-level photograph, overcast bright daylight."
+    },
+    {
+      "sourceNumber": 13,
+      "image": "public/images/projects/gargash-mercedes-gac-showroom.webp",
+      "mobile": "public/images/projects/gargash-mercedes-gac-showroom-640.webp",
+      "scenePrompt": "High-end automotive showroom exterior in Dubai, dramatic long glass facade and sculptural metal canopy, several unbranded premium cars visible inside, clean forecourt, blue-hour ambient light with warm interior illumination."
+    },
+    {
+      "sourceNumber": 14,
+      "image": "public/images/projects/emirates-nbd-deira-building.webp",
+      "mobile": "public/images/projects/emirates-nbd-deira-building-640.webp",
+      "scenePrompt": "Established corporate office tower in Deira, Dubai, mid-rise commercial tower with regular glass and stone facade, urban street and palms, bright late-afternoon sky, professional architectural street photography. No bank brand or signage."
+    },
+    {
+      "sourceNumber": 15,
+      "image": "public/images/projects/royal-stables-abu-dhabi.webp",
+      "mobile": "public/images/projects/royal-stables-abu-dhabi-640.webp",
+      "scenePrompt": "Refined equestrian complex in Abu Dhabi, elegant low stable buildings with shaded colonnade around a pristine sand training courtyard, warm regional architectural details, palms, soft morning light, wide view without people or animals."
+    },
+    {
+      "sourceNumber": 18,
+      "image": "public/images/projects/mediclinic-ivf-clinic-al-ain.webp",
+      "mobile": "public/images/projects/mediclinic-ivf-clinic-al-ain-640.webp",
+      "scenePrompt": "Premium fertility clinic interior in Al Ain, calm welcoming reception and consultation corridor, warm oak details, pale stone, subtle sage upholstery, soft daylight and discreet ceiling ventilation, high-end healthcare architecture, empty pristine space."
+    },
+    {
+      "sourceNumber": 19,
+      "image": "public/images/projects/v2-emirates-hills-dubai.webp",
+      "mobile": "public/images/projects/v2-emirates-hills-dubai-640.webp",
+      "scenePrompt": "Modern luxury villa in Emirates Hills, Dubai, sculptural two-storey white volumes, dark-framed glazing and long garden pool, lush landscaping, front corner viewpoint, clear dusk sky with warm interior lighting."
+    },
+    {
+      "sourceNumber": 20,
+      "image": "public/images/projects/ai71-yas-place-office.webp",
+      "mobile": "public/images/projects/ai71-yas-place-office-640.webp",
+      "scenePrompt": "Contemporary artificial-intelligence company office in Abu Dhabi, sophisticated open workspace with meeting pods, flexible workstations and an elegant lounge, floor-to-ceiling windows overlooking a distant marina, refined blue and warm wood palette, naturally lit interior."
+    },
+    {
+      "sourceNumber": 22,
+      "image": "public/images/projects/limestone-house-residential.webp",
+      "mobile": "public/images/projects/limestone-house-residential-640.webp",
+      "scenePrompt": "Upscale residential building in Dubai with warm limestone cladding, deep recessed windows, refined landscaped arrival courtyard, mature date palms, soft golden afternoon light, low-angle architectural exterior."
+    },
+    {
+      "sourceNumber": 23,
+      "image": "public/images/projects/al-qoua-residential-villas.webp",
+      "mobile": "public/images/projects/al-qoua-residential-villas-640.webp",
+      "scenePrompt": "Extensive low-rise residential community near Al Qua, Abu Dhabi, orderly streets of contemporary beige villas with central small neighborhood retail pavilion and drought-tolerant planting, aerial oblique composition, clear natural desert morning light."
+    },
+    {
+      "sourceNumber": 24,
+      "image": "public/images/projects/titan-humidity-redesign-facility.webp",
+      "mobile": "public/images/projects/titan-humidity-redesign-facility-640.webp",
+      "scenePrompt": "Anonymous modern utility and accommodation facility in an arid environment, low utilitarian buildings with carefully screened cooling and ventilation infrastructure, clean service road, realistic restrained architecture, close architectural exterior in warm daylight. No location-identifying marks, flags, defenses or sensitive facilities."
+    },
+    {
+      "sourceNumber": 26,
+      "image": "public/images/projects/hameem-university-abu-dhabi.webp",
+      "mobile": "public/images/projects/hameem-university-abu-dhabi-640.webp",
+      "scenePrompt": "Contemporary university academic campus in Abu Dhabi, sandstone-colored teaching buildings around a landscaped pedestrian courtyard, shaded arcades and modern glazing, orderly planting, wide architectural view, soft morning light. Generic educational architecture, no military details or signage."
+    },
+    {
+      "sourceNumber": 27,
+      "image": "public/images/projects/tiktok-dubai-innovation-hub.webp",
+      "mobile": "public/images/projects/tiktok-dubai-innovation-hub-640.webp",
+      "scenePrompt": "Premium creative technology office in Dubai Internet City, expressive but sophisticated office lounge and collaborative workspace, sculptural acoustic ceiling, generous daylight, warm timber and subtle coral accents, no logos or words, wide interior photography."
+    },
+    {
+      "sourceNumber": 29,
+      "image": "public/images/projects/advanced-diagnostic-oncology-sharjah.webp",
+      "mobile": "public/images/projects/advanced-diagnostic-oncology-sharjah-640.webp",
+      "scenePrompt": "Contemporary specialist diagnostic healthcare centre in Sharjah, elegant modern clinic exterior with glass entry and warm stone facade, shaded drop-off canopy, landscaped approach, welcoming daylight architectural view, no patients or staff."
+    },
+    {
+      "sourceNumber": 30,
+      "image": "public/images/projects/delma-sports-complex-abu-dhabi.webp",
+      "mobile": "public/images/projects/delma-sports-complex-abu-dhabi-640.webp",
+      "scenePrompt": "Modern sports complex in Abu Dhabi, strong geometric sports hall architecture with long-span roof and glass entrance, well-kept outdoor courts and landscaped arrival space, clear late afternoon light, wide architectural exterior."
+    },
+    {
+      "sourceNumber": 31,
+      "image": "public/images/projects/hardrock-cafe-silicon-oasis.webp",
+      "mobile": "public/images/projects/hardrock-cafe-silicon-oasis-640.webp",
+      "scenePrompt": "Stylish music-inspired restaurant interior in Dubai Silicon Oasis, sophisticated timber booths, deep leather seating, warm pendant lighting, tasteful stage and abstract music decor, integrated ceiling ventilation, wide atmospheric interior, no recognizable logos, musicians or readable signs."
+    },
+    {
+      "sourceNumber": 32,
+      "image": "public/images/projects/jabal-hafeet-clinic-al-ain.webp",
+      "mobile": "public/images/projects/jabal-hafeet-clinic-al-ain-640.webp",
+      "scenePrompt": "Modern community clinic near Jabal Hafeet in Al Ain, low warm-stone healthcare building framed by the distant rugged mountain and desert-adapted gardens, elegant shaded entrance, clear morning light, wide exterior architectural photography."
+    },
+    {
+      "sourceNumber": 33,
+      "image": "public/images/projects/dewa-headquarters-al-jaddaf.webp",
+      "mobile": "public/images/projects/dewa-headquarters-al-jaddaf-640.webp",
+      "scenePrompt": "Sustainable contemporary utility headquarters in Al Jaddaf, Dubai, striking mid-rise office building with extensive solar shading, pale stone and high-performance glazing, solar canopy and landscaped pedestrian approach, professional daytime architectural exterior, no corporate signage."
+    },
+    {
+      "sourceNumber": 34,
+      "image": "public/images/projects/skyline-avante-garde-jvc.webp",
+      "mobile": "public/images/projects/skyline-avante-garde-jvc-640.webp",
+      "scenePrompt": "Elegant contemporary residential tower in Jumeirah Village Circle, Dubai, approximately twenty-four storeys with rhythmic balconies and warm vertical accents, landscaped street foreground and surrounding lower-rise neighborhood, golden-hour architectural photography."
+    }
+  ]
+}
