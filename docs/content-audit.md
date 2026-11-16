@@ -41,15 +41,15 @@ Rechecked on 1 October 2026 against a fresh live page collection. The source con
 | /about/ | About | Dedicated page / structured source content |
 | / | Solar Spark | Home page retained |
 
-## Project update — 7 November 2026
+## Project update — 16 November 2026
 
-The project rows above describe the original migration only. The owner subsequently supplied an ordered project spreadsheet. The website now presents its 32 retained entries on one Projects page, with yellow-marked entries removed. `/completed/` and `/on-going/` are legacy aliases of `/projects/`. See [project-content.md](project-content.md) for current content and image provenance.
+The project rows above describe the original migration only. The owner subsequently supplied an ordered project spreadsheet and later project revisions. The website now presents 33 entries (30 retained spreadsheet projects and three additions) on one Projects page; yellow-marked spreadsheet entries and two later-removed projects are excluded. `/completed/` and `/on-going/` are legacy aliases of `/projects/`. See [project-content.md](project-content.md) for current content and image provenance.
 
 ## Additional findings
 
 - Footer/content links also reference /u-value-testing/, /indoor-air-quality-testing/ and /duck-leak-test/. These legacy paths resolve to their complete canonical service pages.
 
-- /our-team/ remains in the sitemap but currently returns HTTP 404. Four historical profiles were recovered from the search-indexed version. Their roles and experience require company confirmation before launch; they are presented as published company profiles.
+- The team page is temporarily hidden from site navigation and the sitemap. Its page source and four historical profiles remain in the repository for restoration; confirm roles and experience before making them public again.
 - /dalt-leak-test/ also returns HTTP 404; its indexed content duplicates the live /duct-leak-test/ page. Both paths resolve to the expanded duct leakage page.
 - /jobs/813/ currently shows Full Time, Dubai, an empty job description and an application form. It is mapped to the careers page without inventing a job title or responsibilities.
 - All 101 WordPress post titles were inspected: gambling and other unrelated posts, plus the default Hello world post. No legitimate company news article was found. These were not migrated.

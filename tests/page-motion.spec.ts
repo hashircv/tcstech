@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('inner pages support shared heading motion and changing reduced-motion preferences', async ({ page }) => {
   test.setTimeout(60000);
   for (const slug of ['services', 'testing-commissioning-of-mep-system', 'projects', 'completed',
-    'on-going', 'about', 'our-team', 'career', 'contact', 'markets', 'news-insight', 'missing-page']) {
+    'on-going', 'about', 'career', 'contact', 'markets', 'news-insight', 'missing-page']) {
     await page.emulateMedia({ reducedMotion: 'no-preference' });
     await page.goto(`http://127.0.0.1:5174/${slug}/`);
     await expect(page.locator('.inner-page h1')).toBeVisible();

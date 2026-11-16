@@ -1,6 +1,6 @@
 # TCS Building Energy Efficiency Services
 
-Responsive React, TypeScript, Vite and Tailwind CSS website with 15 active service detail pages, a certifications page, one ordered 32-project portfolio with scope, client and location details.
+Responsive React, TypeScript, Vite and Tailwind CSS website with 15 active service detail pages, a certifications page, one ordered 33-project portfolio with scope, client and location details.
 
 ## Local development
 
@@ -36,11 +36,11 @@ The contact form opens WhatsApp with the visitor's message prefilled. The career
 ## Project structure
 
 - `src/components/`: shared layout, hero carousel, service/project images, forms and scroll reveals.
-- `src/pages/`: separate home, services, service detail, projects, about, team, careers, contact, markets, news and 404 page files, plus a small router. Inner pages load on demand.
+- `src/pages/`: separate home, services, service detail, projects, about, careers, contact, markets, news and 404 page files, plus a small router. Inner pages load on demand. Team profiles and page source are retained but temporarily hidden.
 - `src/data/`: complete service content, service catalogue, contact details and the ordered project data in `projects.json`.
-- `public/images/`: final responsive images. Each active service has a distinct image; the portfolio contains seven project photographs, two official developer renderings and 23 labelled architectural illustrations.
+- `public/images/`: final responsive images. Each active service has a distinct image; the portfolio contains nine project photographs, two official developer renderings and 22 labelled architectural illustrations.
 - `public/videos/`: edited 7.4-second desktop and mobile hero videos, which autoplay muted on slide three.
-- `public/certifications/`: ISO certificates and optimized preview images for the certifications page.
+- `public/certifications/`: ISO certificates, BSRIA and CSA membership certificates, and optimized preview images for the certifications page.
 - `scripts/build-routes.mjs`: production entry pages, metadata and redirects.
 - `docs/`: reference-content audit and image provenance.
 - `tests/`: desktop/mobile interactions, service details, unique image coverage and slideshow checks.

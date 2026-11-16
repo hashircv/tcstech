@@ -11,11 +11,11 @@ export function ProjectPortfolio() {
     <section className="section-shell directory-section project-directory" aria-label="Project portfolio">
       <p className="portfolio-intro">{projects.length} projects. Specialist expertise for every scope.</p>
       <div className="portfolio-grid">
-        {projects.map((project, index) => <Reveal key={project.id}>
+        {projects.map(project => <Reveal key={project.id}>
           <article className="portfolio-card">
             <ProjectPhoto project={project} />
             <div className="portfolio-card-copy">
-              <span className="eyebrow">{String(index + 1).padStart(2, '0')} / PROJECT</span>
+              <span className="eyebrow">{String(project.sourceNumber).padStart(2, '0')} / PROJECT</span>
               <h2>{project.name}</h2>
               <dl className="project-facts">
                 <div><dt>Scope</dt><dd>{project.scope}</dd></div>

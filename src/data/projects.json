@@ -12,7 +12,8 @@
     "imageAlt": "Official Emaar developer rendering of Golf Hillside at Dubai Hills Estate, Dubai.",
     "imageWidth": 924,
     "imageHeight": 616,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 1
   },
   {
     "id": "azha-villa-300-villas-ajman-uae",
@@ -27,7 +28,8 @@
     "imageAlt": "Official Emirates Properties rendering of the AZHA residential community in Ajman, UAE.",
     "imageWidth": 819,
     "imageHeight": 546,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 2
   },
   {
     "id": "explorers-mirdif-city-center-dubai-uae",
@@ -42,7 +44,8 @@
     "imageAlt": "Interior play area at Explorers, City Centre Mirdif, Dubai.",
     "imageWidth": 696,
     "imageHeight": 464,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 3
   },
   {
     "id": "al-badia-phase-6-town-house-development-120-villas",
@@ -57,7 +60,8 @@
     "imageAlt": "Al Badia Phase 6 Town House Development, 120 Villas - TCS project",
     "imageWidth": 802,
     "imageHeight": 495,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 4
   },
   {
     "id": "dec-campus-legacy-at-dubai-exhibition-centre-dec",
@@ -72,7 +76,8 @@
     "imageAlt": "Architectural illustration for DEC CAMPUS LEGACY AT DUBAI EXHIBITION CENTRE (DEC); not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 5
   },
   {
     "id": "wynn-hotel-and-resorts-ras-al-khaimah",
@@ -87,7 +92,8 @@
     "imageAlt": "Wynn Al Marjan Island resort construction site on Al Marjan Island, Ras Al Khaimah, UAE.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 6
   },
   {
     "id": "byd-car-showroom-auto-village-phase-2",
@@ -102,7 +108,8 @@
     "imageAlt": "Architectural illustration for BYD CAR SHOWROOM,Auto Village Phase 2; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 7
   },
   {
     "id": "hvac-works-kerno",
@@ -117,26 +124,12 @@
     "imageAlt": "Architectural illustration for HVAC WORKS KERNO.; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
-  },
-  {
-    "id": "villa-luvana-emirates-hills-dubai",
-    "sourceNumber": 9,
-    "name": "Villa Luvana, Emirates Hills, Dubai.",
-    "scope": "TESTING ADJUSTING AND BALANCING WORKS",
-    "client": "Aurinko Limited",
-    "location": "Emirates Hills, Dubai , UAE",
-    "image": "/images/projects/villa-luvana-emirates-hills.webp",
-    "mobile": "/images/projects/villa-luvana-emirates-hills-640.webp",
-    "imageKind": "illustration",
-    "imageAlt": "Architectural illustration for Villa Luvana, Emirates Hills, Dubai.; not an actual project photograph.",
-    "imageWidth": 1000,
-    "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 8
   },
   {
     "id": "wadi-al-amardi-villas-no-124-dubai-u-a-e",
-    "sourceNumber": 10,
+    "sourceNumber": 9,
     "name": "Wadi Al Amardi Villas No. 124, Dubai, U.A.E",
     "scope": "ELECTRICAL TESTING",
     "client": "CONVERSION ELECTROMECHANICAL CO LLC",
@@ -147,26 +140,28 @@
     "imageAlt": "Architectural illustration for Wadi Al Amardi Villas No. 124, Dubai, U.A.E; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 10
   },
   {
-    "id": "khazan-dxb3-data-centre-ibn-batuta",
-    "sourceNumber": 11,
-    "name": "Khazan DXB3 data Centre - IBN Batuta",
+    "id": "khazna-dxb3-data-centre-ibn-battuta",
+    "sourceNumber": 10,
+    "name": "Khazna DXB3 Data Centre - Ibn Battuta",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "CORE INTERNATIONAL PROJECT MANAGEMENT LLC",
     "location": "Ibn Battuta, Dubai, UAE",
     "image": "/images/projects/khazan-dxb3-data-centre.webp",
     "mobile": "/images/projects/khazan-dxb3-data-centre-640.webp",
     "imageKind": "illustration",
-    "imageAlt": "Architectural illustration for Khazan DXB3 data Centre - IBN Batuta; not an actual project photograph.",
+    "imageAlt": "Architectural illustration for Khazna DXB3 Data Centre - Ibn Battuta; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 11
   },
   {
     "id": "petalz-commercial-residential-building-at-al-warsan",
-    "sourceNumber": 12,
+    "sourceNumber": 11,
     "name": "PETALZ, Commercial/Residential building at Al Warsan",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "DANUBE PROPERTIES DEVELOPMENT LLC",
@@ -177,11 +172,12 @@
     "imageAlt": "PETALZ, Commercial/Residential building at Al Warsan - TCS project",
     "imageWidth": 1000,
     "imageHeight": 563,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 12
   },
   {
     "id": "mercedes-benz-and-gac-showroom-gargash-2025079",
-    "sourceNumber": 13,
+    "sourceNumber": 12,
     "name": "MERCEDES BENZ AND GAC SHOWROOM (GARGASH)(2025079",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "Design Infinity LLC",
@@ -192,11 +188,12 @@
     "imageAlt": "Architectural illustration for MERCEDES BENZ AND GAC SHOWROOM (GARGASH)(2025079; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 13
   },
   {
     "id": "emirates-nbd-4-basement-gf-m-16-typical-floors-deira-dubai-uae",
-    "sourceNumber": 14,
+    "sourceNumber": 13,
     "name": "Emirates NBD,4 basement+GF+M+16 Typical Floors, Deira, Dubai, UAE",
     "scope": "INDOOR AIR QUALITY TEST",
     "client": "EMNE Technical Works L.L.C",
@@ -207,11 +204,12 @@
     "imageAlt": "Architectural illustration for Emirates NBD,4 basement+GF+M+16 Typical Floors, Deira, Dubai, UAE; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 14
   },
   {
     "id": "royal-stables",
-    "sourceNumber": 15,
+    "sourceNumber": 14,
     "name": "Royal Stables",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "GULF INDUSTRIAL SERVICES CO GISCO - LLC - SPC",
@@ -222,11 +220,12 @@
     "imageAlt": "Architectural illustration for Royal Stables; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 15
   },
   {
     "id": "mediclinic-renovation-of-ivf-clinic-al-ain",
-    "sourceNumber": 18,
+    "sourceNumber": 15,
     "name": "MEDICLINIC RENOVATION OF IVF CLINIC, Al Ain",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "INCH SPACE INTERIOR DECORATION LLC",
@@ -237,11 +236,12 @@
     "imageAlt": "Architectural illustration for MEDICLINIC RENOVATION OF IVF CLINIC, Al Ain; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 18
   },
   {
     "id": "v2-emirates-hills-dubai",
-    "sourceNumber": 19,
+    "sourceNumber": 16,
     "name": "V2,EMIRATES HILLS, DUBAI",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "INTENT EXTENT MIDDLE EAST PROPERTY",
@@ -252,11 +252,12 @@
     "imageAlt": "Architectural illustration for V2,EMIRATES HILLS, DUBAI; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 19
   },
   {
     "id": "ai71-office-level-3-4-yas-place-abudhabi",
-    "sourceNumber": 20,
+    "sourceNumber": 17,
     "name": "AI71 Office @ Level 3 & 4, Yas Place - Abudhabi",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "INTS TECHNICAL SERVICES LLC",
@@ -267,11 +268,12 @@
     "imageAlt": "Architectural illustration for AI71 Office @ Level 3 & 4, Yas Place - Abudhabi; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 20
   },
   {
     "id": "limestone-house-residential",
-    "sourceNumber": 22,
+    "sourceNumber": 18,
     "name": "LIMESTONE HOUSE RESIDENTIAL",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "LSH-UP-02 LIMESTONE HOUSE RESIDENTIAL-RETAIL BODY CORPORATE",
@@ -282,11 +284,12 @@
     "imageAlt": "Architectural illustration for LIMESTONE HOUSE RESIDENTIAL; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 22
   },
   {
     "id": "al-qoua-residential-450-villas-1-retail-al-qua-in-abu-dhabi-u-a-e",
-    "sourceNumber": 23,
+    "sourceNumber": 19,
     "name": "Al QOU'A Residential (450 Villas + 1 Retail ) Al Qua in Abu Dhabi, U.A.E",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "Nael General Contracting Owned By Nayel Rashed Al Shamsi Sole Proprietorship LLC",
@@ -297,26 +300,12 @@
     "imageAlt": "Architectural illustration for Al QOU'A Residential (450 Villas + 1 Retail ) Al Qua in Abu Dhabi, U.A.E; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
-  },
-  {
-    "id": "titan-mildew-abatement-humidity-redesign",
-    "sourceNumber": 24,
-    "name": "TITAN Mildew Abatement & Humidity Redesign",
-    "scope": "TESTING ADJUSTING AND BALANCING WORKS & DUCT LEAKAGE TEST",
-    "client": "Prime Projects International (Constuction Limited)",
-    "location": "Undisclosed US army Base",
-    "image": "/images/projects/titan-humidity-redesign-facility.webp",
-    "mobile": "/images/projects/titan-humidity-redesign-facility-640.webp",
-    "imageKind": "illustration",
-    "imageAlt": "Architectural illustration for TITAN Mildew Abatement & Humidity Redesign; not an actual project photograph.",
-    "imageWidth": 1000,
-    "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 23
   },
   {
     "id": "maf-tower-01-level-10-11-dubai-uae",
-    "sourceNumber": 25,
+    "sourceNumber": 20,
     "name": "MAF Tower 01 - Level 10 & 11, Dubai, UAE",
     "scope": "DUCT CLEANING",
     "client": "PROTON ENGINEERING L L C",
@@ -327,11 +316,12 @@
     "imageAlt": "MAF Tower 01 - Level 10 & 11, Dubai, UAE - TCS project",
     "imageWidth": 513,
     "imageHeight": 464,
-    "mobileWidth": 513
+    "mobileWidth": 513,
+    "originalSourceNumber": 25
   },
   {
     "id": "hameem-military-university-hmv-abu-dhabi-u-a-e",
-    "sourceNumber": 26,
+    "sourceNumber": 21,
     "name": "Hameem military university (HMV), Abu Dhabi, U.A.E.",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "ROYAL ADVANCE ELECTROMECHANICAL L.L.C",
@@ -342,11 +332,12 @@
     "imageAlt": "Architectural illustration for Hameem military university (HMV), Abu Dhabi, U.A.E.; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 26
   },
   {
     "id": "tiktok-bytedance-dubai-innovation-hub-8a",
-    "sourceNumber": 27,
+    "sourceNumber": 22,
     "name": "TIKTOK,Bytedance Dubai Innovation Hub 8A",
     "scope": "TAB ,DUCT CLEANING , DUCT LEAKAGE TEST,PROJECT MANAGEMENT CONSULTANCY",
     "client": "SME ELECTROMECHANICAL LLC",
@@ -357,11 +348,12 @@
     "imageAlt": "Architectural illustration for TIKTOK,Bytedance Dubai Innovation Hub 8A; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 27
   },
   {
     "id": "sensoria-at-five-luxe-42-storeys-jbr-dubai",
-    "sourceNumber": 28,
+    "sourceNumber": 23,
     "name": "Sensoria at Five Luxe, 42 Storeys , JBR, Dubai",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "SPECTRUM CUBE TECHNICAL SERVICES L.L.C",
@@ -372,11 +364,12 @@
     "imageAlt": "Sensoria at Five Luxe, 42 Storeys , JBR, Dubai - TCS project",
     "imageWidth": 1000,
     "imageHeight": 1000,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 28
   },
   {
     "id": "advanced-diagnostic-oncology-center-sharjah-uae",
-    "sourceNumber": 29,
+    "sourceNumber": 24,
     "name": "Advanced Diagnostic Oncology Center– Sharjah, UAE",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "Spectrum Cube Technical Services L.L.C",
@@ -387,11 +380,12 @@
     "imageAlt": "Architectural illustration for Advanced Diagnostic Oncology Center– Sharjah, UAE; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 29
   },
   {
     "id": "delma-sports-complex-al-miyan-street-abu-dhabi",
-    "sourceNumber": 30,
+    "sourceNumber": 25,
     "name": "Delma Sports Complex, Al Miyan Street, Abu Dhabi",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS & DUCT LEAKAGE TEST",
     "client": "TESTER ELECTROMECHANICAL L.L.C",
@@ -402,11 +396,12 @@
     "imageAlt": "Architectural illustration for Delma Sports Complex, Al Miyan Street, Abu Dhabi; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 30
   },
   {
     "id": "hardrock-cafe-silicon-oasis-dubai-uae",
-    "sourceNumber": 31,
+    "sourceNumber": 26,
     "name": "Hardrock Café, Silicon Oasis, Dubai, UAE",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS & PROJECT MANAGEMENT CONSULTANCY",
     "client": "TESTER ELECTROMECHANICAL L.L.C",
@@ -417,11 +412,12 @@
     "imageAlt": "Architectural illustration for Hardrock Café, Silicon Oasis, Dubai, UAE; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 31
   },
   {
     "id": "jabal-hafeet-clinic-al-ain-uae",
-    "sourceNumber": 32,
+    "sourceNumber": 27,
     "name": "Jabal Hafeet Clinic - Al Ain, UAE",
     "scope": "COMMISSIONING MANAGEMENT",
     "client": "Trojan general contracting",
@@ -432,11 +428,12 @@
     "imageAlt": "Architectural illustration for Jabal Hafeet Clinic - Al Ain, UAE; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 32
   },
   {
     "id": "dewa-hq-jadaf-dubai-uae",
-    "sourceNumber": 33,
+    "sourceNumber": 28,
     "name": "Dewa HQ Jadaf, Dubai, UAE",
     "scope": "SMOKE TEST",
     "client": "VOLTAS LIMITED",
@@ -447,11 +444,12 @@
     "imageAlt": "Architectural illustration for Dewa HQ Jadaf, Dubai, UAE; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 33
   },
   {
     "id": "skyline-avante-garde-jvc-g-24-storey-building",
-    "sourceNumber": 34,
+    "sourceNumber": 29,
     "name": "Skyline Avante Garde JVC G+24 Storey building",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "Highstar Contracting LLC",
@@ -462,21 +460,71 @@
     "imageAlt": "Architectural illustration for Skyline Avante Garde JVC G+24 Storey building; not an actual project photograph.",
     "imageWidth": 1000,
     "imageHeight": 667,
-    "mobileWidth": 640
+    "mobileWidth": 640,
+    "originalSourceNumber": 34
   },
   {
     "id": "dubai-holding-head-quarters-dubai",
-    "sourceNumber": 35,
-    "name": "Dubai Holding head quarters , Dubai",
+    "sourceNumber": 30,
+    "name": "Dubai Holding Head Quarters, Dubai",
     "scope": "TESTING ADJUSTING AND BALANCING WORKS",
     "client": "INTS TECHNICAL SERVICES LLC",
     "location": "",
     "image": "/images/projects/dubai-holding-hq-mep-commissioning.webp",
     "mobile": "/images/projects/dubai-holding-hq-mep-commissioning-640.webp",
     "imageKind": "project",
-    "imageAlt": "Dubai Holding head quarters , Dubai - TCS project",
+    "imageAlt": "Dubai Holding Head Quarters, Dubai - TCS project",
     "imageWidth": 865,
     "imageHeight": 557,
+    "mobileWidth": 640,
+    "originalSourceNumber": 35
+  },
+  {
+    "id": "beeah-group-headquarters",
+    "sourceNumber": 31,
+    "originalSourceNumber": null,
+    "name": "BEEAH Group Headquarters",
+    "scope": "Seasonal commissioning for LEED",
+    "client": "BEEAH Group",
+    "location": "Sharjah, UAE",
+    "image": "/images/projects/beeah-group-headquarters.webp",
+    "mobile": "/images/projects/beeah-group-headquarters-640.webp",
+    "imageKind": "project",
+    "imageAlt": "Exterior of BEEAH Group Headquarters in Sharjah, UAE, designed by Zaha Hadid Architects.",
+    "imageWidth": 1000,
+    "imageHeight": 563,
+    "mobileWidth": 640
+  },
+  {
+    "id": "al-sheraa-dewa-headquarters",
+    "sourceNumber": 32,
+    "originalSourceNumber": null,
+    "name": "Al Shera’a DEWA Headquarters",
+    "scope": "CAR Park Ventilation Smoke Testing",
+    "client": "Dubai Electricity & Water Authority (DEWA)",
+    "location": "Al Jaddaf, Dubai, UAE",
+    "image": "/images/projects/al-sheraa-dewa-headquarters.webp",
+    "mobile": "/images/projects/al-sheraa-dewa-headquarters-640.webp",
+    "imageKind": "illustration",
+    "imageAlt": "Architectural illustration representing Al Shera’a DEWA Headquarters in Dubai; not an actual project photograph.",
+    "imageWidth": 1000,
+    "imageHeight": 667,
+    "mobileWidth": 640
+  },
+  {
+    "id": "w-hotel-abu-dhabi-yas-island",
+    "sourceNumber": 33,
+    "originalSourceNumber": null,
+    "name": "W Hotel Abu Dhabi",
+    "scope": "Ventilation System Re-Balancing",
+    "client": "W Hotel Abu Dhabi",
+    "location": "Yas Island, Abu Dhabi, UAE",
+    "image": "/images/projects/w-abu-dhabi-yas-island.webp",
+    "mobile": "/images/projects/w-abu-dhabi-yas-island-640.webp",
+    "imageKind": "project",
+    "imageAlt": "Exterior of W Abu Dhabi - Yas Island; official Marriott hotel photo.",
+    "imageWidth": 1000,
+    "imageHeight": 564,
     "mobileWidth": 640
   }
 ]

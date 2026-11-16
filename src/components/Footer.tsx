@@ -17,7 +17,6 @@ export function Footer() {
             <h2 className="footer-label">Explore TCS</h2>
             <a href="/">Home</a>
             <a href="/about/">About us</a>
-            <a href="/our-team/">Our team</a>
             <a href="/markets/">Markets</a>
             <a href="/career/">Careers</a>
             <a href="/news-insight/">News & insights</a>

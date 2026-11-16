@@ -29,9 +29,9 @@ The website uses React components and local content files. Updates require editi
 | Service directory and detail layouts | `src/pages/ServicesPage.tsx`, `ServiceDetailPage.tsx` |
 | Unified Projects page | `src/pages/ProjectsPage.tsx`, `src/components/ProjectPortfolio.tsx`, `project-portfolio.css` |
 | Certifications page and certificate preview cards | `src/pages/CertificationPage.tsx`, `public/certifications/` |
-| About, team and careers pages | `src/pages/AboutPage.tsx`, `TeamPage.tsx`, `CareerPage.tsx` |
+| About and careers pages | `src/pages/AboutPage.tsx`, `CareerPage.tsx` |
+| Temporarily hidden team page and biographies (retained for restoration) | `src/pages/TeamPage.tsx`, `src/data/team.ts`; restore navigation and router/SEO entries when ready |
 | Markets, news and missing-page layouts | `src/pages/MarketsPage.tsx`, `NewsPage.tsx`, `NotFoundPage.tsx` |
-| Team biographies | `src/data/team.ts` |
 | Inner-page titles and content lookup | `src/data/pages.ts` |
 | Contact page | `src/pages/ContactPage.tsx` |
 | Reusable inner-page heading and breadcrumbs | `src/components/PageHero.tsx` |

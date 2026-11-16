@@ -7,25 +7,49 @@ const scope = 'Provision of integrated MEP (mechanical, electrical and plumbing)
 
 const certificates = [
   {
+    type: 'ISO CERTIFICATION',
     standard: 'ISO 9001:2015',
     name: 'Quality management system',
     number: 'AB80VII62026659',
+    issuer: 'Globus Certifications Private Limited',
     image: '/certifications/iso-9001-preview-1.webp',
     pdf: '/certifications/tcs-iso-9001-2015.pdf',
   },
   {
+    type: 'ISO CERTIFICATION',
     standard: 'ISO 14001:2015',
     name: 'Environmental management system',
     number: 'CD80VII62026660',
+    issuer: 'Globus Certifications Private Limited',
     image: '/certifications/iso-14001-preview-1.webp',
     pdf: '/certifications/tcs-iso-14001-2015.pdf',
   },
   {
+    type: 'ISO CERTIFICATION',
     standard: 'ISO 45001:2018',
     name: 'Occupational health and safety management system',
     number: 'EF80VII62026661',
+    issuer: 'Globus Certifications Private Limited',
     image: '/certifications/iso-45001-preview-1.webp',
     pdf: '/certifications/tcs-iso-45001-2018.pdf',
+  },
+  {
+    type: 'PROFESSIONAL MEMBERSHIP',
+    standard: 'BSRIA',
+    name: 'Building Services Research & Intelligence Association',
+    number: 'Membership no. CON1776',
+    issuer: 'Building Services Research & Intelligence Association',
+    image: '/certifications/bsria-membership-preview.webp',
+    pdf: '/certifications/tcs-bsria-membership-certificate.pdf',
+  },
+  {
+    type: 'PROFESSIONAL MEMBERSHIP',
+    standard: 'CSA',
+    name: 'Commissioning Specialists Association · Corporate Member',
+    number: 'Membership no. 1051 · Certificate no. 71051789',
+    issuer: 'Commissioning Specialists Association',
+    image: '/certifications/csa-membership-preview.webp',
+    pdf: '/certifications/tcs-csa-corporate-membership-certificate.pdf',
   },
 ];
 
@@ -42,28 +66,27 @@ export function CertificationPage() {
 
   return <>
     <PageHero title="Recognised standards. Responsible delivery." eyebrow="CERTIFICATIONS"
-      description="Our management systems are assessed against internationally recognised standards for quality, environmental responsibility, and occupational health and safety." />
+      description="Internationally recognised ISO certifications and professional memberships supporting quality, environmental responsibility, safety and commissioning expertise." />
     <section className="section-shell certification-section" aria-label="TCS ISO certificates">
       <div className="certification-intro">
         <span className="certification-intro-icon"><FileCheck2 size={22}/></span>
         <div>
           <p className="eyebrow">MANAGEMENT SYSTEM CERTIFICATION</p>
           <h2>Clear commitments. Documented standards.</h2>
-          <p>The certificates name T C S Building Energy Efficiency Services L.L.C. and describe the same integrated MEP service scope.</p>
+          <p>Explore TCS management system certifications alongside professional memberships in building services and commissioning.</p>
         </div>
       </div>
       <div className="certification-grid">
         {certificates.map((certificate) => (
           <article className="certification-card" key={certificate.standard}>
             <div className="certificate-preview">
-              <img src={certificate.image} alt={`Full certificate preview: ${certificate.standard} for TCS Building Energy Efficiency Services`} loading="lazy" width="708" height="1000" />
+              <img src={certificate.image} alt={`${certificate.standard} ${certificate.type.toLowerCase()} preview for TCS Building Energy Efficiency Services`} loading="lazy" width="708" height="1000" />
             </div>
             <div className="certificate-content">
-              <p className="eyebrow"><BadgeCheck size={14}/> {certificate.standard}</p>
+              <p className="eyebrow"><BadgeCheck size={14}/> {certificate.type} · {certificate.standard}</p>
               <h2>{certificate.name}</h2>
-              <p className="certificate-number">Certificate no. {certificate.number}</p>
-              <p className="certificate-issuer"><span>Certification body</span><strong>Globus Certifications Private Limited</strong></p>
-              <p className="certificate-validity">Validity is subject to successful surveillance audits, as stated on the certificate.</p>
+              <p className="certificate-number">{certificate.number}</p>
+              <p className="certificate-issuer"><span>{certificate.type === 'ISO CERTIFICATION' ? 'Certification body' : 'Association'}</span><strong>{certificate.issuer}</strong></p>
               <div className="certificate-actions">
                 <button className="certificate-preview-button" onClick={() => setActiveCertificate(certificate)}>
                   <Eye size={16}/> Preview PDF
@@ -77,10 +100,10 @@ export function CertificationPage() {
         ))}
       </div>
       <div className="certification-scope">
-        <p className="eyebrow"><FileCheck2 size={15}/> CERTIFIED SCOPE</p>
+        <p className="eyebrow"><FileCheck2 size={15}/> ISO CERTIFIED SCOPE</p>
         <p>{scope}</p>
       </div>
-      <p className="certification-note">The original PDFs retain their issued dates and validity conditions. Please confirm current certificate status with the certification body before relying on it.</p>
+      <p className="certification-note">Open the original PDF for the complete certificate details and formal terms.</p>
     </section>
     <dialog className="certificate-dialog" ref={previewDialog} aria-labelledby="certificate-dialog-title"
       onClose={() => setActiveCertificate(null)} onClick={(event) => {

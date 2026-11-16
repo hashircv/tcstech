@@ -130,13 +130,6 @@
   line-height: 1.5;
 }
 
-.certificate-validity {
-  color: #72796d;
-  font-size: 10px;
-  line-height: 1.7;
-  min-height: 34px;
-}
-
 .certificate-actions {
   display: grid;
   grid-template-columns: 1.1fr .9fr;

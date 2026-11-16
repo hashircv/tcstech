@@ -13,7 +13,6 @@ reference-audit.txt
 *.tsbuildinfo
 assets/source-video/
 assets/source-images/
-.netlify/
 .vercel/
 coverage/
 *.log

@@ -2,7 +2,7 @@
 
 Checked 1 October 2026 against the freshly fetched WordPress page collection at https://tcstech.me/. All 32 source pages match the previous snapshot after ignoring dynamic careers-form IDs and security tokens.
 
-All 15 active services have detail blocks, section navigation and responsive imagery. Five service URLs redirect to the services directory following the owner's service changes. Project content was replaced on 7 November 2026 by the owner's ordered spreadsheet: 32 retained entries, three yellow rows excluded, and one Projects page. See [project-content.md](project-content.md) for the current project source and imagery, and [project-image-prompts.json](project-image-prompts.json) for generated architectural image prompts.
+All 15 active services have detail blocks, section navigation and responsive imagery. Five service URLs redirect to the services directory following the owner's service changes. Project content was replaced on 7 November 2026 by the owner's ordered spreadsheet and later revised by the owner: the current portfolio has 33 entries (30 retained spreadsheet projects and three additions) on one Projects page. Three yellow spreadsheet rows and two later-removed projects are excluded. See [project-content.md](project-content.md) for the current project source and imagery, and [project-image-prompts.json](project-image-prompts.json) for generated architectural image prompts.
 
 ## Services
 
@@ -28,7 +28,7 @@ All active service images have 1536px and 640px WebP variants.
 
 ## Projects
 
-The current inventory is the single ordered array in `src/data/projects.json`. It contains 32 projects with source numbers 1–15, 18–20 and 22–35. Five matching project photographs are retained at their native dimensions; 27 new architectural illustrations have 1000px/640px WebP variants and are explicitly labelled. Every card has a distinct image. Completed/ongoing categories and the obsolete PDF lists have been retired. See [project-content.md](project-content.md).
+The current inventory is the single ordered array in `src/data/projects.json`. It contains 33 projects: 30 retained spreadsheet records and three added records. Continuous `sourceNumber` values run from 1 to 33; `originalSourceNumber` preserves the original spreadsheet numbers and is `null` for the three additions. The two projects removed at the owner's request are excluded. The portfolio has nine project photographs, two official developer renderings and 22 labelled architectural illustrations with 1000px/640px WebP variants. Every card has a distinct image. Completed/ongoing categories and the obsolete PDF lists have been retired. See [project-content.md](project-content.md).
 
 ## Content cleanup
 

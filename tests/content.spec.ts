@@ -59,17 +59,17 @@ test('catalogue search, category filter, quick panel and legacy paths reach full
     await expect(page.locator('h1')).toHaveText('Every service. Every detail.');
   }
 });
-test('all project entries, company values, team and careers are present',async({page})=>{
+test('all project entries, company values, hidden team route and careers are present',async({page})=>{
   await page.goto(`${base}/projects/`);
-  await expect(page.locator('.portfolio-card')).toHaveCount(32);
+  await expect(page.locator('.portfolio-card')).toHaveCount(33);
   await expect(page.locator('.portfolio-grid')).toContainText('Golf Hillside');
-  await expect(page.locator('.portfolio-grid')).toContainText('Dubai Holding head quarters');
+  await expect(page.locator('.portfolio-grid')).toContainText('Dubai Holding Head Quarters, Dubai');
   await page.goto(`${base}/about/`);
   await expect(page.getByRole('heading',{name:'Technical rigour, guided by care.'})).toBeVisible();
   await expect(page.getByRole('heading',{name:'A reliable process is part of a reliable result.'})).toBeVisible();
   await expect(page.locator('.about-purpose-card').filter({hasText:'Our mission'})).toBeVisible();
   await expect(page.locator('.about-purpose-card').filter({hasText:'Our vision'})).toBeVisible();
-  await page.goto(`${base}/our-team/`);await expect(page.locator('.team-card')).toHaveCount(4);
+  await page.goto(`${base}/our-team/`);await expect(page.getByRole('heading',{name:'Page not found'})).toBeVisible();
   await page.goto(`${base}/career/`);await expect(page.getByText('ITI AC Technician',{exact:true})).toBeVisible();
   await expect(page.getByLabel('Qualification')).toBeVisible();
   await expect(page.getByText('This form does not upload or store files.')).toBeVisible();
@@ -120,7 +120,7 @@ test('standards supplied for selected services are visible on their detail pages
 test('expanded pages fit mobile and all service card images resolve',async({page,request})=>{
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.setViewportSize({width:390,height:844});
-  for(const slug of ['services','mep-health-check','about','career','contact','completed','on-going','our-team','markets','news-insight']){
+  for(const slug of ['services','mep-health-check','about','career','contact','completed','on-going','missing-page','markets','news-insight']){
     await page.goto(`${base}/${slug}/`);await expect(page.locator('h1')).toBeVisible();
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),slug).toBe(true);
   }

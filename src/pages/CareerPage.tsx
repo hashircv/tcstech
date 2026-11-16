@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowDownRight, ArrowUpRight, GraduationCap, UsersRound } from 'lucide-react';
+import { ArrowDown, ArrowDownRight, GraduationCap, UsersRound } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
 import { EnquiryForm } from '../components/EnquiryForm';
 
@@ -62,7 +62,6 @@ export function CareerPage() {
               <p>Availability can change. Contact our team to confirm current openings. We also welcome expressions of interest for future opportunities.</p>
             </Reveal>
 
-            <a href="/our-team/" className="career-team-link">Meet the team <ArrowUpRight size={17} /></a>
           </div>
 
           <div className="career-application-column" id="application">

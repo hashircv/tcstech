@@ -10,7 +10,6 @@ const ServiceDetailPage = lazy(() => import('./ServiceDetailPage').then(module =
 const ProjectsPage = lazy(() => import('./ProjectsPage').then(module => ({ default: module.ProjectsPage })));
 const CertificationPage = lazy(() => import('./CertificationPage').then(module => ({ default: module.CertificationPage })));
 const AboutPage = lazy(() => import('./AboutPage').then(module => ({ default: module.AboutPage })));
-const TeamPage = lazy(() => import('./TeamPage').then(module => ({ default: module.TeamPage })));
 const CareerPage = lazy(() => import('./CareerPage').then(module => ({ default: module.CareerPage })));
 const ContactPage = lazy(() => import('./ContactPage').then(module => ({ default: module.ContactPage })));
 const MarketsPage = lazy(() => import('./MarketsPage').then(module => ({ default: module.MarketsPage })));
@@ -22,7 +21,6 @@ const pages = {
   projects: ProjectsPage,
   certifications: CertificationPage,
   about: AboutPage,
-  'our-team': TeamPage,
   career: CareerPage,
   contact: ContactPage,
   markets: MarketsPage,
