@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowDownRight, GraduationCap, UsersRound } from 'lucide-react';
+import { ArrowDown, ArrowDownRight, ArrowUpRight, GraduationCap, UsersRound } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
 import { EnquiryForm } from '../components/EnquiryForm';
 
